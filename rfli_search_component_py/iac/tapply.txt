@@ -1,0 +1,1932 @@
+[0m[1mdata.aws_ssm_parameter.prelim_eod_time: Reading...[0m[0m
+[0m[1mdata.aws_ssm_parameter.market_open_time: Reading...[0m[0m
+[0m[1mdata.aws_iam_role.trigger_init: Reading...[0m[0m
+[0m[1mdata.aws_sns_topic.trigger_all_intra: Reading...[0m[0m
+[0m[1mdata.aws_ssm_parameter.intra_rate_time: Reading...[0m[0m
+[0m[1mdata.aws_api_gateway_rest_api.intradiapp: Reading...[0m[0m
+[0m[1mdata.aws_ssm_parameter.eod_rate_time: Reading...[0m[0m
+[0m[1mdata.aws_kms_key.secrets: Reading...[0m[0m
+[0m[1mdata.aws_dynamodb_table.data_version_intra: Reading...[0m[0m
+[0m[1mdata.aws_ssm_parameter.market_close_time: Reading...[0m[0m
+[0m[1mdata.aws_kms_key.secrets: Read complete after 1s [id=aefca1a4-54d9-4686-a735-8a35ee8d5930][0m
+[0m[1mdata.aws_sns_topic.trigger_all_intra: Read complete after 1s [id=arn:aws:sns:us-east-1:841224051934:sns-dev-rfli-trigger-all-intra][0m
+[0m[1mdata.aws_iam_role.trigger_init: Read complete after 1s [id=rol-dev-lbd-rfli-trigger-init-data-version][0m
+[0m[1mdata.aws_ssm_parameter.prelim_eod_time: Read complete after 1s [id=ps-dev-rfli-prelim-eod-time][0m
+[0m[1mdata.aws_sns_topic.trigger_all_eod: Reading...[0m[0m
+[0m[1mdata.aws_ssm_parameter.market_close_time: Read complete after 0s [id=ps-dev-rfli-market-close-time][0m
+[0m[1mdata.aws_ssm_parameter.final_eod_time: Reading...[0m[0m
+[0m[1mdata.aws_ssm_parameter.intra_rate_time: Read complete after 1s [id=ps-dev-rfli-intra-rate-time][0m
+[0m[1mdata.aws_ssm_parameter.eod_rate_time: Read complete after 1s [id=ps-dev-rfli-eod-rate-time][0m
+[0m[1mdata.aws_ssm_parameter.market_open_time: Read complete after 1s [id=ps-dev-rfli-market-open-time][0m
+[0m[1mdata.aws_api_gateway_rest_api.intradiapp: Read complete after 1s [id=xcrsy02d5f][0m
+[0m[1mdata.aws_lambda_function.trigger_init: Reading...[0m[0m
+[0m[1mdata.aws_caller_identity.AccountID: Reading...[0m[0m
+[0m[1mdata.archive_file.layer_isines: Reading...[0m[0m
+[0m[1mdata.aws_sns_topic.trigger_all_eod: Read complete after 0s [id=arn:aws:sns:us-east-1:841224051934:sns-dev-rfli-trigger-all-eod][0m
+[0m[1mdata.archive_file.layer_titles: Reading...[0m[0m
+[0m[1mdata.archive_file.trigger_eod: Reading...[0m[0m
+[0m[1mdata.aws_ssm_parameter.final_eod_time: Read complete after 0s [id=ps-dev-rfli-final-eod-time][0m
+[0m[1mdata.archive_file.trigger_intra: Reading...[0m[0m
+[0m[1mdata.archive_file.layer_issuers: Reading...[0m[0m
+[0m[1mdata.archive_file.trigger_eod: Read complete after 0s [id=24ed62bf7b914dfcf34c7719e336e0f50e897a18][0m
+[0m[1mdata.archive_file.layer_isines: Read complete after 0s [id=c7d3b46a61efd86e1c185e305185c62dffaa5384][0m
+[0m[1mdata.aws_caller_identity.AccountID: Read complete after 0s [id=841224051934][0m
+[0m[1mdata.archive_file.layer_issuers: Read complete after 0s [id=1f3eef0edc4e1b4dc9d9e0143bd0f89831f54038][0m
+[0m[1mdata.archive_file.trigger_intra: Read complete after 0s [id=78bfff35afd6d4a4cc19ef94aa251b07b2f9a625][0m
+[0m[1mdata.aws_api_gateway_authorizers.intradiapp: Reading...[0m[0m
+[0m[1mdata.archive_file.layer_titles: Read complete after 0s [id=82c7d2eee16f1a9e7da4805f793513622d082bde][0m
+[0m[1mdata.aws_api_gateway_authorizers.intradiapp: Read complete after 0s [id=xcrsy02d5f][0m
+[0m[1mdata.aws_dynamodb_table.data_version_intra: Read complete after 1s [id=dnb-rfli-data-version-intra][0m
+[0m[1mdata.aws_api_gateway_authorizer.intradiapp: Reading...[0m[0m
+[0m[1mdata.aws_api_gateway_authorizer.intradiapp: Read complete after 1s [id=mcvcnm][0m
+[0m[1mdata.aws_lambda_function.trigger_init: Read complete after 1s [id=lbd-dev-rfli-trigger-init-data-version][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # aws_api_gateway_integration.isines_lambda_integration[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_integration" "isines_lambda_integration" {
+      [32m+[0m[0m cache_namespace         = (known after apply)
+      [32m+[0m[0m connection_type         = "INTERNET"
+      [32m+[0m[0m http_method             = "GET"
+      [32m+[0m[0m id                      = (known after apply)
+      [32m+[0m[0m integration_http_method = "POST"
+      [32m+[0m[0m passthrough_behavior    = (known after apply)
+      [32m+[0m[0m resource_id             = (known after apply)
+      [32m+[0m[0m rest_api_id             = "xcrsy02d5f"
+      [32m+[0m[0m timeout_milliseconds    = 29000
+      [32m+[0m[0m type                    = "AWS_PROXY"
+      [32m+[0m[0m uri                     = (known after apply)
+    }
+
+[1m  # aws_api_gateway_integration.isines_options_integration[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_integration" "isines_options_integration" {
+      [32m+[0m[0m cache_namespace         = (known after apply)
+      [32m+[0m[0m connection_type         = "INTERNET"
+      [32m+[0m[0m http_method             = "OPTIONS"
+      [32m+[0m[0m id                      = (known after apply)
+      [32m+[0m[0m integration_http_method = "OPTIONS"
+      [32m+[0m[0m passthrough_behavior    = (known after apply)
+      [32m+[0m[0m resource_id             = (known after apply)
+      [32m+[0m[0m rest_api_id             = "xcrsy02d5f"
+      [32m+[0m[0m timeout_milliseconds    = 29000
+      [32m+[0m[0m type                    = "MOCK"
+    }
+
+[1m  # aws_api_gateway_integration.issuers_lambda_integration[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_integration" "issuers_lambda_integration" {
+      [32m+[0m[0m cache_namespace         = (known after apply)
+      [32m+[0m[0m connection_type         = "INTERNET"
+      [32m+[0m[0m http_method             = "GET"
+      [32m+[0m[0m id                      = (known after apply)
+      [32m+[0m[0m integration_http_method = "POST"
+      [32m+[0m[0m passthrough_behavior    = (known after apply)
+      [32m+[0m[0m resource_id             = (known after apply)
+      [32m+[0m[0m rest_api_id             = "xcrsy02d5f"
+      [32m+[0m[0m timeout_milliseconds    = 29000
+      [32m+[0m[0m type                    = "AWS_PROXY"
+      [32m+[0m[0m uri                     = (known after apply)
+    }
+
+[1m  # aws_api_gateway_integration.issuers_options_integration[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_integration" "issuers_options_integration" {
+      [32m+[0m[0m cache_namespace         = (known after apply)
+      [32m+[0m[0m connection_type         = "INTERNET"
+      [32m+[0m[0m http_method             = "OPTIONS"
+      [32m+[0m[0m id                      = (known after apply)
+      [32m+[0m[0m integration_http_method = "OPTIONS"
+      [32m+[0m[0m passthrough_behavior    = (known after apply)
+      [32m+[0m[0m resource_id             = (known after apply)
+      [32m+[0m[0m rest_api_id             = "xcrsy02d5f"
+      [32m+[0m[0m timeout_milliseconds    = 29000
+      [32m+[0m[0m type                    = "MOCK"
+    }
+
+[1m  # aws_api_gateway_integration.titles_lambda_integration[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_integration" "titles_lambda_integration" {
+      [32m+[0m[0m cache_namespace         = (known after apply)
+      [32m+[0m[0m connection_type         = "INTERNET"
+      [32m+[0m[0m http_method             = "POST"
+      [32m+[0m[0m id                      = (known after apply)
+      [32m+[0m[0m integration_http_method = "POST"
+      [32m+[0m[0m passthrough_behavior    = (known after apply)
+      [32m+[0m[0m resource_id             = (known after apply)
+      [32m+[0m[0m rest_api_id             = "xcrsy02d5f"
+      [32m+[0m[0m timeout_milliseconds    = 29000
+      [32m+[0m[0m type                    = "AWS_PROXY"
+      [32m+[0m[0m uri                     = (known after apply)
+    }
+
+[1m  # aws_api_gateway_integration.titles_options_integration[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_integration" "titles_options_integration" {
+      [32m+[0m[0m cache_namespace         = (known after apply)
+      [32m+[0m[0m connection_type         = "INTERNET"
+      [32m+[0m[0m http_method             = "OPTIONS"
+      [32m+[0m[0m id                      = (known after apply)
+      [32m+[0m[0m integration_http_method = "OPTIONS"
+      [32m+[0m[0m passthrough_behavior    = (known after apply)
+      [32m+[0m[0m resource_id             = (known after apply)
+      [32m+[0m[0m rest_api_id             = "xcrsy02d5f"
+      [32m+[0m[0m timeout_milliseconds    = 29000
+      [32m+[0m[0m type                    = "MOCK"
+    }
+
+[1m  # aws_api_gateway_integration_response.isines_get_response_200[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_integration_response" "isines_get_response_200" {
+      [32m+[0m[0m http_method        = "GET"
+      [32m+[0m[0m id                 = (known after apply)
+      [32m+[0m[0m resource_id        = (known after apply)
+      [32m+[0m[0m response_templates = {
+          [32m+[0m[0m "application/json" = ""
+        }
+      [32m+[0m[0m rest_api_id        = "xcrsy02d5f"
+      [32m+[0m[0m status_code        = "200"
+    }
+
+[1m  # aws_api_gateway_integration_response.isines_options_response_200[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_integration_response" "isines_options_response_200" {
+      [32m+[0m[0m http_method         = "OPTIONS"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m resource_id         = (known after apply)
+      [32m+[0m[0m response_parameters = {
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Methods" = "'GET,OPTIONS'"
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Origin"  = "'*'"
+        }
+      [32m+[0m[0m response_templates  = {
+          [32m+[0m[0m "application/json" = ""
+        }
+      [32m+[0m[0m rest_api_id         = "xcrsy02d5f"
+      [32m+[0m[0m status_code         = "200"
+    }
+
+[1m  # aws_api_gateway_integration_response.issuers_get_response_200[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_integration_response" "issuers_get_response_200" {
+      [32m+[0m[0m http_method        = "GET"
+      [32m+[0m[0m id                 = (known after apply)
+      [32m+[0m[0m resource_id        = (known after apply)
+      [32m+[0m[0m response_templates = {
+          [32m+[0m[0m "application/json" = ""
+        }
+      [32m+[0m[0m rest_api_id        = "xcrsy02d5f"
+      [32m+[0m[0m status_code        = "200"
+    }
+
+[1m  # aws_api_gateway_integration_response.issuers_options_response_200[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_integration_response" "issuers_options_response_200" {
+      [32m+[0m[0m http_method         = "OPTIONS"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m resource_id         = (known after apply)
+      [32m+[0m[0m response_parameters = {
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Methods" = "'GET,OPTIONS,POST,PUT'"
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Origin"  = "'*'"
+        }
+      [32m+[0m[0m response_templates  = {
+          [32m+[0m[0m "application/json" = ""
+        }
+      [32m+[0m[0m rest_api_id         = "xcrsy02d5f"
+      [32m+[0m[0m status_code         = "200"
+    }
+
+[1m  # aws_api_gateway_integration_response.titles_options_response_200[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_integration_response" "titles_options_response_200" {
+      [32m+[0m[0m http_method         = "OPTIONS"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m resource_id         = (known after apply)
+      [32m+[0m[0m response_parameters = {
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Methods" = "'POST,OPTIONS'"
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Origin"  = "'*'"
+        }
+      [32m+[0m[0m response_templates  = {
+          [32m+[0m[0m "application/json" = ""
+        }
+      [32m+[0m[0m rest_api_id         = "xcrsy02d5f"
+      [32m+[0m[0m status_code         = "200"
+    }
+
+[1m  # aws_api_gateway_integration_response.titles_post_response_200[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_integration_response" "titles_post_response_200" {
+      [32m+[0m[0m http_method        = "POST"
+      [32m+[0m[0m id                 = (known after apply)
+      [32m+[0m[0m resource_id        = (known after apply)
+      [32m+[0m[0m response_templates = {
+          [32m+[0m[0m "application/json" = ""
+        }
+      [32m+[0m[0m rest_api_id        = "xcrsy02d5f"
+      [32m+[0m[0m status_code        = "200"
+    }
+
+[1m  # aws_api_gateway_method.isines_get_method[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_method" "isines_get_method" {
+      [32m+[0m[0m api_key_required = false
+      [32m+[0m[0m authorization    = "CUSTOM"
+      [32m+[0m[0m authorizer_id    = "mcvcnm"
+      [32m+[0m[0m http_method      = "GET"
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m resource_id      = (known after apply)
+      [32m+[0m[0m rest_api_id      = "xcrsy02d5f"
+    }
+
+[1m  # aws_api_gateway_method.isines_options_method[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_method" "isines_options_method" {
+      [32m+[0m[0m api_key_required = false
+      [32m+[0m[0m authorization    = "NONE"
+      [32m+[0m[0m http_method      = "OPTIONS"
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m resource_id      = (known after apply)
+      [32m+[0m[0m rest_api_id      = "xcrsy02d5f"
+    }
+
+[1m  # aws_api_gateway_method.issuers_get_method[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_method" "issuers_get_method" {
+      [32m+[0m[0m api_key_required = false
+      [32m+[0m[0m authorization    = "CUSTOM"
+      [32m+[0m[0m authorizer_id    = "mcvcnm"
+      [32m+[0m[0m http_method      = "GET"
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m resource_id      = (known after apply)
+      [32m+[0m[0m rest_api_id      = "xcrsy02d5f"
+    }
+
+[1m  # aws_api_gateway_method.issuers_options_method[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_method" "issuers_options_method" {
+      [32m+[0m[0m api_key_required = false
+      [32m+[0m[0m authorization    = "NONE"
+      [32m+[0m[0m http_method      = "OPTIONS"
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m resource_id      = (known after apply)
+      [32m+[0m[0m rest_api_id      = "xcrsy02d5f"
+    }
+
+[1m  # aws_api_gateway_method.titles_options_method[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_method" "titles_options_method" {
+      [32m+[0m[0m api_key_required = false
+      [32m+[0m[0m authorization    = "NONE"
+      [32m+[0m[0m http_method      = "OPTIONS"
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m resource_id      = (known after apply)
+      [32m+[0m[0m rest_api_id      = "xcrsy02d5f"
+    }
+
+[1m  # aws_api_gateway_method.titles_post_method[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_method" "titles_post_method" {
+      [32m+[0m[0m api_key_required = false
+      [32m+[0m[0m authorization    = "CUSTOM"
+      [32m+[0m[0m authorizer_id    = "mcvcnm"
+      [32m+[0m[0m http_method      = "POST"
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m resource_id      = (known after apply)
+      [32m+[0m[0m rest_api_id      = "xcrsy02d5f"
+    }
+
+[1m  # aws_api_gateway_method_response.isines_get_response_200[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_method_response" "isines_get_response_200" {
+      [32m+[0m[0m http_method         = "GET"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m resource_id         = (known after apply)
+      [32m+[0m[0m response_models     = {
+          [32m+[0m[0m "application/json" = "Empty"
+        }
+      [32m+[0m[0m response_parameters = {
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Headers" = true
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Methods" = true
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Origin"  = true
+        }
+      [32m+[0m[0m rest_api_id         = "xcrsy02d5f"
+      [32m+[0m[0m status_code         = "200"
+    }
+
+[1m  # aws_api_gateway_method_response.isines_options_response_200[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_method_response" "isines_options_response_200" {
+      [32m+[0m[0m http_method         = "OPTIONS"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m resource_id         = (known after apply)
+      [32m+[0m[0m response_models     = {
+          [32m+[0m[0m "application/json" = "Empty"
+        }
+      [32m+[0m[0m response_parameters = {
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Headers" = true
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Methods" = true
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Origin"  = true
+        }
+      [32m+[0m[0m rest_api_id         = "xcrsy02d5f"
+      [32m+[0m[0m status_code         = "200"
+    }
+
+[1m  # aws_api_gateway_method_response.issuers_get_response_200[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_method_response" "issuers_get_response_200" {
+      [32m+[0m[0m http_method         = "GET"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m resource_id         = (known after apply)
+      [32m+[0m[0m response_parameters = {
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Headers" = true
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Methods" = true
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Origin"  = true
+        }
+      [32m+[0m[0m rest_api_id         = "xcrsy02d5f"
+      [32m+[0m[0m status_code         = "200"
+    }
+
+[1m  # aws_api_gateway_method_response.issuers_options_response_200[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_method_response" "issuers_options_response_200" {
+      [32m+[0m[0m http_method         = "OPTIONS"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m resource_id         = (known after apply)
+      [32m+[0m[0m response_models     = {
+          [32m+[0m[0m "application/json" = "Empty"
+        }
+      [32m+[0m[0m response_parameters = {
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Headers" = true
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Methods" = true
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Origin"  = true
+        }
+      [32m+[0m[0m rest_api_id         = "xcrsy02d5f"
+      [32m+[0m[0m status_code         = "200"
+    }
+
+[1m  # aws_api_gateway_method_response.titles_options_response_200[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_method_response" "titles_options_response_200" {
+      [32m+[0m[0m http_method         = "OPTIONS"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m resource_id         = (known after apply)
+      [32m+[0m[0m response_models     = {
+          [32m+[0m[0m "application/json" = "Empty"
+        }
+      [32m+[0m[0m response_parameters = {
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Headers" = true
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Methods" = true
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Origin"  = true
+        }
+      [32m+[0m[0m rest_api_id         = "xcrsy02d5f"
+      [32m+[0m[0m status_code         = "200"
+    }
+
+[1m  # aws_api_gateway_method_response.titles_post_response_200[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_method_response" "titles_post_response_200" {
+      [32m+[0m[0m http_method         = "POST"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m resource_id         = (known after apply)
+      [32m+[0m[0m response_models     = {
+          [32m+[0m[0m "application/json" = "Empty"
+        }
+      [32m+[0m[0m response_parameters = {
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Headers" = true
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Methods" = true
+          [32m+[0m[0m "method.response.header.Access-Control-Allow-Origin"  = true
+        }
+      [32m+[0m[0m rest_api_id         = "xcrsy02d5f"
+      [32m+[0m[0m status_code         = "200"
+    }
+
+[1m  # aws_api_gateway_resource.component[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_resource" "component" {
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m parent_id   = "a334tdhcy4"
+      [32m+[0m[0m path        = (known after apply)
+      [32m+[0m[0m path_part   = "isin-search"
+      [32m+[0m[0m rest_api_id = "xcrsy02d5f"
+    }
+
+[1m  # aws_api_gateway_resource.isines[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_resource" "isines" {
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m parent_id   = (known after apply)
+      [32m+[0m[0m path        = (known after apply)
+      [32m+[0m[0m path_part   = "isines"
+      [32m+[0m[0m rest_api_id = "xcrsy02d5f"
+    }
+
+[1m  # aws_api_gateway_resource.issuers[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_resource" "issuers" {
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m parent_id   = (known after apply)
+      [32m+[0m[0m path        = (known after apply)
+      [32m+[0m[0m path_part   = "issuers"
+      [32m+[0m[0m rest_api_id = "xcrsy02d5f"
+    }
+
+[1m  # aws_api_gateway_resource.titles[0m will be created
+[0m  [32m+[0m[0m resource "aws_api_gateway_resource" "titles" {
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m parent_id   = (known after apply)
+      [32m+[0m[0m path        = (known after apply)
+      [32m+[0m[0m path_part   = "titles"
+      [32m+[0m[0m rest_api_id = "xcrsy02d5f"
+    }
+
+[1m  # aws_dynamodb_table.all_isines[0m will be created
+[0m  [32m+[0m[0m resource "aws_dynamodb_table" "all_isines" {
+      [32m+[0m[0m arn              = (known after apply)
+      [32m+[0m[0m billing_mode     = "PAY_PER_REQUEST"
+      [32m+[0m[0m hash_key         = "isin"
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m name             = "dnb-rfli-isin-search-all-isines"
+      [32m+[0m[0m read_capacity    = (known after apply)
+      [32m+[0m[0m stream_arn       = (known after apply)
+      [32m+[0m[0m stream_label     = (known after apply)
+      [32m+[0m[0m stream_view_type = (known after apply)
+      [32m+[0m[0m tags_all         = (known after apply)
+      [32m+[0m[0m write_capacity   = (known after apply)
+
+      [32m+[0m[0m attribute {
+          [32m+[0m[0m name = "isin"
+          [32m+[0m[0m type = "S"
+        }
+    }
+
+[1m  # aws_dynamodb_table.issuers[0m will be created
+[0m  [32m+[0m[0m resource "aws_dynamodb_table" "issuers" {
+      [32m+[0m[0m arn              = (known after apply)
+      [32m+[0m[0m billing_mode     = "PAY_PER_REQUEST"
+      [32m+[0m[0m hash_key         = "issuer"
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m name             = "dnb-rfli-isin-search-issuers"
+      [32m+[0m[0m read_capacity    = (known after apply)
+      [32m+[0m[0m stream_arn       = (known after apply)
+      [32m+[0m[0m stream_label     = (known after apply)
+      [32m+[0m[0m stream_view_type = (known after apply)
+      [32m+[0m[0m tags_all         = (known after apply)
+      [32m+[0m[0m write_capacity   = (known after apply)
+
+      [32m+[0m[0m attribute {
+          [32m+[0m[0m name = "issuer"
+          [32m+[0m[0m type = "S"
+        }
+    }
+
+[1m  # aws_glue_job.etl_eod[0m will be created
+[0m  [32m+[0m[0m resource "aws_glue_job" "etl_eod" {
+      [32m+[0m[0m arn               = (known after apply)
+      [32m+[0m[0m connections       = [
+          [32m+[0m[0m "vpc_app_1",
+          [32m+[0m[0m "vpc_app_2",
+        ]
+      [32m+[0m[0m default_arguments = {
+          [32m+[0m[0m "--DB_QUERY_TIMEOUT" = "300"
+          [32m+[0m[0m "--DESTINATION_MAIL" = "flash2-dev@precia.co"
+          [32m+[0m[0m "--FINAL_EOD_TIME"   = "ps-dev-rfli-final-eod-time"
+          [32m+[0m[0m "--FLASH_ORIGIN_DB"  = "sm-dev-rfli-isin-search-db"
+          [32m+[0m[0m "--ORIGIN_MAIL"      = "isin-lookup-component-dev@precia.co"
+          [32m+[0m[0m "--SMTP_CREDENTIALS" = "sm-dev-rfli-isin-search-mail"
+          [32m+[0m[0m "--job-language"     = "python"
+          [32m+[0m[0m "library-set"        = "analytics"
+        }
+      [32m+[0m[0m execution_class   = "STANDARD"
+      [32m+[0m[0m glue_version      = "3.0"
+      [32m+[0m[0m id                = (known after apply)
+      [32m+[0m[0m max_capacity      = 1
+      [32m+[0m[0m max_retries       = 0
+      [32m+[0m[0m name              = "glue-dev-rfli-etl-isin-search-eod"
+      [32m+[0m[0m role_arn          = (known after apply)
+      [32m+[0m[0m tags_all          = (known after apply)
+      [32m+[0m[0m timeout           = 10
+
+      [32m+[0m[0m command {
+          [32m+[0m[0m name            = "pythonshell"
+          [32m+[0m[0m python_version  = "3.9"
+          [32m+[0m[0m runtime         = (known after apply)
+          [32m+[0m[0m script_location = "s3://s3-dev-rfli-isin-search-code/glue-rfli-etl-isin-search-eod.py"
+        }
+
+      [32m+[0m[0m execution_property {
+          [32m+[0m[0m max_concurrent_runs = 1
+        }
+    }
+
+[1m  # aws_glue_job.etl_init[0m will be created
+[0m  [32m+[0m[0m resource "aws_glue_job" "etl_init" {
+      [32m+[0m[0m arn               = (known after apply)
+      [32m+[0m[0m connections       = [
+          [32m+[0m[0m "vpc_app_1",
+          [32m+[0m[0m "vpc_app_2",
+        ]
+      [32m+[0m[0m default_arguments = {
+          [32m+[0m[0m "--DB_QUERY_TIMEOUT" = "300"
+          [32m+[0m[0m "--DESTINATION_MAIL" = "flash2-dev@precia.co"
+          [32m+[0m[0m "--FLASH_ORIGIN_DB"  = "sm-dev-rfli-isin-search-db"
+          [32m+[0m[0m "--ORIGIN_MAIL"      = "isin-lookup-component-dev@precia.co"
+          [32m+[0m[0m "--SMTP_CREDENTIALS" = "sm-dev-rfli-isin-search-mail"
+          [32m+[0m[0m "--job-language"     = "python"
+          [32m+[0m[0m "library-set"        = "analytics"
+        }
+      [32m+[0m[0m execution_class   = "STANDARD"
+      [32m+[0m[0m glue_version      = "3.0"
+      [32m+[0m[0m id                = (known after apply)
+      [32m+[0m[0m max_capacity      = 1
+      [32m+[0m[0m max_retries       = 0
+      [32m+[0m[0m name              = "glue-dev-rfli-init-isin-search"
+      [32m+[0m[0m role_arn          = (known after apply)
+      [32m+[0m[0m tags_all          = (known after apply)
+      [32m+[0m[0m timeout           = 10
+
+      [32m+[0m[0m command {
+          [32m+[0m[0m name            = "pythonshell"
+          [32m+[0m[0m python_version  = "3.9"
+          [32m+[0m[0m runtime         = (known after apply)
+          [32m+[0m[0m script_location = "s3://s3-dev-rfli-isin-search-code/glue-rfli-init-isin-search.py"
+        }
+
+      [32m+[0m[0m execution_property {
+          [32m+[0m[0m max_concurrent_runs = 1
+        }
+    }
+
+[1m  # aws_glue_job.etl_intra[0m will be created
+[0m  [32m+[0m[0m resource "aws_glue_job" "etl_intra" {
+      [32m+[0m[0m arn               = (known after apply)
+      [32m+[0m[0m connections       = [
+          [32m+[0m[0m "vpc_app_1",
+          [32m+[0m[0m "vpc_app_2",
+        ]
+      [32m+[0m[0m default_arguments = {
+          [32m+[0m[0m "--DB_QUERY_TIMEOUT"  = "300"
+          [32m+[0m[0m "--DESTINATION_MAIL"  = "flash2-dev@precia.co"
+          [32m+[0m[0m "--FLASH_ORIGIN_DB"   = "sm-dev-rfli-isin-search-db"
+          [32m+[0m[0m "--INTRA_RATE_TIME"   = "ps-dev-rfli-intra-rate-time"
+          [32m+[0m[0m "--MARKET_CLOSE_TIME" = "ps-dev-rfli-market-close-time"
+          [32m+[0m[0m "--MARKET_OPEN_TIME"  = "ps-dev-rfli-market-open-time"
+          [32m+[0m[0m "--ORIGIN_MAIL"       = "isin-lookup-component-dev@precia.co"
+          [32m+[0m[0m "--PRE_EOD_TIME"      = "ps-dev-rfli-prelim-eod-time"
+          [32m+[0m[0m "--SMTP_CREDENTIALS"  = "sm-dev-rfli-isin-search-mail"
+          [32m+[0m[0m "--job-language"      = "python"
+          [32m+[0m[0m "library-set"         = "analytics"
+        }
+      [32m+[0m[0m execution_class   = "STANDARD"
+      [32m+[0m[0m glue_version      = "3.0"
+      [32m+[0m[0m id                = (known after apply)
+      [32m+[0m[0m max_capacity      = 1
+      [32m+[0m[0m max_retries       = 0
+      [32m+[0m[0m name              = "glue-dev-rfli-etl-isin-search-intra"
+      [32m+[0m[0m role_arn          = (known after apply)
+      [32m+[0m[0m tags_all          = (known after apply)
+      [32m+[0m[0m timeout           = 10
+
+      [32m+[0m[0m command {
+          [32m+[0m[0m name            = "pythonshell"
+          [32m+[0m[0m python_version  = "3.9"
+          [32m+[0m[0m runtime         = (known after apply)
+          [32m+[0m[0m script_location = "s3://s3-dev-rfli-isin-search-code/glue-rfli-etl-isin-search-intra.py"
+        }
+
+      [32m+[0m[0m execution_property {
+          [32m+[0m[0m max_concurrent_runs = 1
+        }
+    }
+
+[1m  # aws_iam_policy.code_bucket[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "code_bucket" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politica para acceder al S3 bucket con el codigo del componente isin-search"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-isin-search-bucket-code"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = (known after apply)
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_policy.log[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "log" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politica para acceder a log del componente isin-search"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-isin-search-log"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action   = [
+                          [32m+[0m[0m "logs:CreateLogGroup",
+                          [32m+[0m[0m "logs:CreateLogStream",
+                          [32m+[0m[0m "logs:PutLogEvents",
+                          [32m+[0m[0m "logs:DescribeLogStreams",
+                        ]
+                      [32m+[0m[0m Effect   = "Allow"
+                      [32m+[0m[0m Resource = [
+                          [32m+[0m[0m "*",
+                        ]
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_policy.secrets[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "secrets" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politica para acceder a los secretos del componente isin-search"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-isin-search-secrets"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = (known after apply)
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_policy.specify_etl_eod[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "specify_etl_eod" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politicas especificas para glue-*-rfli-etl-isin-search-eod"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-etl-isin-search-eod"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = (known after apply)
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_policy.specify_etl_init[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "specify_etl_init" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politicas especificas para glue-*-rfli-init-isin-search"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-init-isin-search"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = (known after apply)
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_policy.specify_etl_intra[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "specify_etl_intra" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politicas especificas para glue-*-rfli-etl-isin-search-intra"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-etl-isin-search-intra"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = (known after apply)
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_policy.specify_layer_isines[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "specify_layer_isines" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politicas especificas para lbd-*-rfli-layer-isin-search-isines"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-layer-isin-search-isines"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = (known after apply)
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_policy.specify_layer_issuers[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "specify_layer_issuers" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politicas especificas para lbd-*-rfli-layer-isin-search-issuers"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-layer-isin-search-issuers"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = (known after apply)
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_policy.specify_layer_titles[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "specify_layer_titles" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politicas especificas para lbd-*-rfli-layer-isin-search-titles"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-layer-isin-search-titles"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = (known after apply)
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_policy.specify_trigger_eod[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "specify_trigger_eod" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politicas especificas para lbd-*-rfli-trigger-isin-search-eod"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-trigger-isin-search-eod"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = (known after apply)
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_policy.specify_trigger_intra[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "specify_trigger_intra" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politicas especificas para lbd-*-rfli-trigger-isin-search-intra"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-trigger-isin-search-intra"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = (known after apply)
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_policy.trigger_etl_init[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "trigger_etl_init" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politicas especificas para trigger glue-*-rfli-init-isin-search"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-trigger-glue-init-isin-search"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = (known after apply)
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_policy.vpc[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_policy" "vpc" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m description = "Politica para acceder a VPC del componente isin-search"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "policy-rfli-isin-search-vpc"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m policy      = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action   = [
+                          [32m+[0m[0m "ec2:DescribeVpcEndpoints",
+                          [32m+[0m[0m "ec2:DescribeRouteTables",
+                          [32m+[0m[0m "ec2:CreateNetworkInterface",
+                          [32m+[0m[0m "ec2:CreateTags",
+                          [32m+[0m[0m "ec2:DeleteNetworkInterface",
+                          [32m+[0m[0m "ec2:DescribeNetworkInterfaces",
+                          [32m+[0m[0m "ec2:DescribeSecurityGroups",
+                          [32m+[0m[0m "ec2:DescribeSubnets",
+                          [32m+[0m[0m "ec2:DescribeVpcAttribute",
+                        ]
+                      [32m+[0m[0m Effect   = "Allow"
+                      [32m+[0m[0m Resource = [
+                          [32m+[0m[0m "*",
+                        ]
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m policy_id   = (known after apply)
+      [32m+[0m[0m tags_all    = (known after apply)
+    }
+
+[1m  # aws_iam_role.etl_eod[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role" "etl_eod" {
+      [32m+[0m[0m arn                   = (known after apply)
+      [32m+[0m[0m assume_role_policy    = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "sts:AssumeRole"
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "glue.amazonaws.com"
+                        }
+                      [32m+[0m[0m Sid       = ""
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m create_date           = (known after apply)
+      [32m+[0m[0m force_detach_policies = false
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m managed_policy_arns   = (known after apply)
+      [32m+[0m[0m max_session_duration  = 3600
+      [32m+[0m[0m name                  = "rol-dev-glue-rfli-etl-isin-search-eod"
+      [32m+[0m[0m name_prefix           = (known after apply)
+      [32m+[0m[0m path                  = "/"
+      [32m+[0m[0m tags_all              = (known after apply)
+      [32m+[0m[0m unique_id             = (known after apply)
+    }
+
+[1m  # aws_iam_role.etl_init[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role" "etl_init" {
+      [32m+[0m[0m arn                   = (known after apply)
+      [32m+[0m[0m assume_role_policy    = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "sts:AssumeRole"
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "glue.amazonaws.com"
+                        }
+                      [32m+[0m[0m Sid       = ""
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m create_date           = (known after apply)
+      [32m+[0m[0m force_detach_policies = false
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m managed_policy_arns   = (known after apply)
+      [32m+[0m[0m max_session_duration  = 3600
+      [32m+[0m[0m name                  = "role-dev-glue-rfli-init-isin-search"
+      [32m+[0m[0m name_prefix           = (known after apply)
+      [32m+[0m[0m path                  = "/"
+      [32m+[0m[0m tags_all              = (known after apply)
+      [32m+[0m[0m unique_id             = (known after apply)
+    }
+
+[1m  # aws_iam_role.etl_intra[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role" "etl_intra" {
+      [32m+[0m[0m arn                   = (known after apply)
+      [32m+[0m[0m assume_role_policy    = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "sts:AssumeRole"
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "glue.amazonaws.com"
+                        }
+                      [32m+[0m[0m Sid       = ""
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m create_date           = (known after apply)
+      [32m+[0m[0m force_detach_policies = false
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m managed_policy_arns   = (known after apply)
+      [32m+[0m[0m max_session_duration  = 3600
+      [32m+[0m[0m name                  = "rol-dev-glue-rfli-etl-isin-search-intra"
+      [32m+[0m[0m name_prefix           = (known after apply)
+      [32m+[0m[0m path                  = "/"
+      [32m+[0m[0m tags_all              = (known after apply)
+      [32m+[0m[0m unique_id             = (known after apply)
+    }
+
+[1m  # aws_iam_role.layer_isines[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role" "layer_isines" {
+      [32m+[0m[0m arn                   = (known after apply)
+      [32m+[0m[0m assume_role_policy    = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "sts:AssumeRole"
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "lambda.amazonaws.com"
+                        }
+                      [32m+[0m[0m Sid       = ""
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m create_date           = (known after apply)
+      [32m+[0m[0m force_detach_policies = false
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m managed_policy_arns   = (known after apply)
+      [32m+[0m[0m max_session_duration  = 3600
+      [32m+[0m[0m name                  = "rol-dev-lbd-layer-rfli-isin-search-isines"
+      [32m+[0m[0m name_prefix           = (known after apply)
+      [32m+[0m[0m path                  = "/"
+      [32m+[0m[0m tags_all              = (known after apply)
+      [32m+[0m[0m unique_id             = (known after apply)
+    }
+
+[1m  # aws_iam_role.layer_issuers[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role" "layer_issuers" {
+      [32m+[0m[0m arn                   = (known after apply)
+      [32m+[0m[0m assume_role_policy    = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "sts:AssumeRole"
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "lambda.amazonaws.com"
+                        }
+                      [32m+[0m[0m Sid       = ""
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m create_date           = (known after apply)
+      [32m+[0m[0m force_detach_policies = false
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m managed_policy_arns   = (known after apply)
+      [32m+[0m[0m max_session_duration  = 3600
+      [32m+[0m[0m name                  = "rol-dev-lbd-layer-rfli-isin-search-issuers"
+      [32m+[0m[0m name_prefix           = (known after apply)
+      [32m+[0m[0m path                  = "/"
+      [32m+[0m[0m tags_all              = (known after apply)
+      [32m+[0m[0m unique_id             = (known after apply)
+    }
+
+[1m  # aws_iam_role.layer_titles[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role" "layer_titles" {
+      [32m+[0m[0m arn                   = (known after apply)
+      [32m+[0m[0m assume_role_policy    = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "sts:AssumeRole"
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "lambda.amazonaws.com"
+                        }
+                      [32m+[0m[0m Sid       = ""
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m create_date           = (known after apply)
+      [32m+[0m[0m force_detach_policies = false
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m managed_policy_arns   = (known after apply)
+      [32m+[0m[0m max_session_duration  = 3600
+      [32m+[0m[0m name                  = "rol-dev-lbd-layer-rfli-isin-search-titles"
+      [32m+[0m[0m name_prefix           = (known after apply)
+      [32m+[0m[0m path                  = "/"
+      [32m+[0m[0m tags_all              = (known after apply)
+      [32m+[0m[0m unique_id             = (known after apply)
+    }
+
+[1m  # aws_iam_role.trigger_eod[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role" "trigger_eod" {
+      [32m+[0m[0m arn                   = (known after apply)
+      [32m+[0m[0m assume_role_policy    = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "sts:AssumeRole"
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "lambda.amazonaws.com"
+                        }
+                      [32m+[0m[0m Sid       = ""
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m create_date           = (known after apply)
+      [32m+[0m[0m force_detach_policies = false
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m managed_policy_arns   = (known after apply)
+      [32m+[0m[0m max_session_duration  = 3600
+      [32m+[0m[0m name                  = "rol-dev-lbd-rfli-trigger-isin-search-eod"
+      [32m+[0m[0m name_prefix           = (known after apply)
+      [32m+[0m[0m path                  = "/"
+      [32m+[0m[0m tags_all              = (known after apply)
+      [32m+[0m[0m unique_id             = (known after apply)
+    }
+
+[1m  # aws_iam_role.trigger_intra[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role" "trigger_intra" {
+      [32m+[0m[0m arn                   = (known after apply)
+      [32m+[0m[0m assume_role_policy    = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "sts:AssumeRole"
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "lambda.amazonaws.com"
+                        }
+                      [32m+[0m[0m Sid       = ""
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m create_date           = (known after apply)
+      [32m+[0m[0m force_detach_policies = false
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m managed_policy_arns   = (known after apply)
+      [32m+[0m[0m max_session_duration  = 3600
+      [32m+[0m[0m name                  = "rol-dev-lbd-rfli-trigger-isin-search-intra"
+      [32m+[0m[0m name_prefix           = (known after apply)
+      [32m+[0m[0m path                  = "/"
+      [32m+[0m[0m tags_all              = (known after apply)
+      [32m+[0m[0m unique_id             = (known after apply)
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_eod_rol_with_code_bucket_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_eod_rol_with_code_bucket_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-glue-rfli-etl-isin-search-eod"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_eod_rol_with_log_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_eod_rol_with_log_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-glue-rfli-etl-isin-search-eod"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_eod_rol_with_secrets_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_eod_rol_with_secrets_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-glue-rfli-etl-isin-search-eod"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_eod_rol_with_specify_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_eod_rol_with_specify_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-glue-rfli-etl-isin-search-eod"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_eod_rol_with_vpc_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_eod_rol_with_vpc_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-glue-rfli-etl-isin-search-eod"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_init_rol_with_code_bucket_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_init_rol_with_code_bucket_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "role-dev-glue-rfli-init-isin-search"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_init_rol_with_log_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_init_rol_with_log_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "role-dev-glue-rfli-init-isin-search"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_init_rol_with_secrets_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_init_rol_with_secrets_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "role-dev-glue-rfli-init-isin-search"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_init_rol_with_specify_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_init_rol_with_specify_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "role-dev-glue-rfli-init-isin-search"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_init_rol_with_vpc_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_init_rol_with_vpc_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "role-dev-glue-rfli-init-isin-search"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_intra_rol_with_code_bucket_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_intra_rol_with_code_bucket_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-glue-rfli-etl-isin-search-intra"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_intra_rol_with_log_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_intra_rol_with_log_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-glue-rfli-etl-isin-search-intra"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_intra_rol_with_secrets_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_intra_rol_with_secrets_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-glue-rfli-etl-isin-search-intra"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_intra_rol_with_specify_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_intra_rol_with_specify_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-glue-rfli-etl-isin-search-intra"
+    }
+
+[1m  # aws_iam_role_policy_attachment.etl_intra_rol_with_vpc_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "etl_intra_rol_with_vpc_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-glue-rfli-etl-isin-search-intra"
+    }
+
+[1m  # aws_iam_role_policy_attachment.layer_isines_rol_with_log_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "layer_isines_rol_with_log_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-layer-rfli-isin-search-isines"
+    }
+
+[1m  # aws_iam_role_policy_attachment.layer_isines_rol_with_vpc_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "layer_isines_rol_with_vpc_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-layer-rfli-isin-search-isines"
+    }
+
+[1m  # aws_iam_role_policy_attachment.layer_isines_with_specify_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "layer_isines_with_specify_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-layer-rfli-isin-search-isines"
+    }
+
+[1m  # aws_iam_role_policy_attachment.layer_issuers_rol_with_log_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "layer_issuers_rol_with_log_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-layer-rfli-isin-search-issuers"
+    }
+
+[1m  # aws_iam_role_policy_attachment.layer_issuers_rol_with_vpc_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "layer_issuers_rol_with_vpc_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-layer-rfli-isin-search-issuers"
+    }
+
+[1m  # aws_iam_role_policy_attachment.layer_issuers_with_specify_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "layer_issuers_with_specify_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-layer-rfli-isin-search-issuers"
+    }
+
+[1m  # aws_iam_role_policy_attachment.layer_titles_rol_with_log_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "layer_titles_rol_with_log_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-layer-rfli-isin-search-titles"
+    }
+
+[1m  # aws_iam_role_policy_attachment.layer_titles_rol_with_vpc_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "layer_titles_rol_with_vpc_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-layer-rfli-isin-search-titles"
+    }
+
+[1m  # aws_iam_role_policy_attachment.layer_titles_with_specify_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "layer_titles_with_specify_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-layer-rfli-isin-search-titles"
+    }
+
+[1m  # aws_iam_role_policy_attachment.trigger_eod_rol_with_log_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "trigger_eod_rol_with_log_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-rfli-trigger-isin-search-eod"
+    }
+
+[1m  # aws_iam_role_policy_attachment.trigger_eod_rol_with_vpc_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "trigger_eod_rol_with_vpc_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-rfli-trigger-isin-search-eod"
+    }
+
+[1m  # aws_iam_role_policy_attachment.trigger_eod_with_specify_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "trigger_eod_with_specify_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-rfli-trigger-isin-search-eod"
+    }
+
+[1m  # aws_iam_role_policy_attachment.trigger_init_rol_with_etl_init_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "trigger_init_rol_with_etl_init_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-rfli-trigger-init-data-version"
+    }
+
+[1m  # aws_iam_role_policy_attachment.trigger_intra_rol_with_log_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "trigger_intra_rol_with_log_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-rfli-trigger-isin-search-intra"
+    }
+
+[1m  # aws_iam_role_policy_attachment.trigger_intra_rol_with_vpc_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "trigger_intra_rol_with_vpc_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-rfli-trigger-isin-search-intra"
+    }
+
+[1m  # aws_iam_role_policy_attachment.trigger_intra_with_specify_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "trigger_intra_with_specify_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = (known after apply)
+      [32m+[0m[0m role       = "rol-dev-lbd-rfli-trigger-isin-search-intra"
+    }
+
+[1m  # aws_lambda_function.layer_isines[0m will be created
+[0m  [32m+[0m[0m resource "aws_lambda_function" "layer_isines" {
+      [32m+[0m[0m architectures                  = (known after apply)
+      [32m+[0m[0m arn                            = (known after apply)
+      [32m+[0m[0m filename                       = "lbd-rfli-layer-isin-search-isines.zip"
+      [32m+[0m[0m function_name                  = "lbd-dev-rfli-layer-isin-search-isines"
+      [32m+[0m[0m handler                        = "lambda_function.lambda_handler"
+      [32m+[0m[0m id                             = (known after apply)
+      [32m+[0m[0m invoke_arn                     = (known after apply)
+      [32m+[0m[0m last_modified                  = (known after apply)
+      [32m+[0m[0m memory_size                    = 128
+      [32m+[0m[0m package_type                   = "Zip"
+      [32m+[0m[0m publish                        = false
+      [32m+[0m[0m qualified_arn                  = (known after apply)
+      [32m+[0m[0m qualified_invoke_arn           = (known after apply)
+      [32m+[0m[0m reserved_concurrent_executions = -1
+      [32m+[0m[0m role                           = (known after apply)
+      [32m+[0m[0m runtime                        = "python3.9"
+      [32m+[0m[0m signing_job_arn                = (known after apply)
+      [32m+[0m[0m signing_profile_version_arn    = (known after apply)
+      [32m+[0m[0m skip_destroy                   = false
+      [32m+[0m[0m source_code_hash               = "rrbnASOndBQ3szhg/lDdIUgUo+hvTgY2rMbqejrJLJA="
+      [32m+[0m[0m source_code_size               = (known after apply)
+      [32m+[0m[0m tags_all                       = (known after apply)
+      [32m+[0m[0m timeout                        = 3
+      [32m+[0m[0m version                        = (known after apply)
+
+      [32m+[0m[0m environment {
+          [32m+[0m[0m variables = {
+              [32m+[0m[0m "MARKET_RATE" = "ps-dev-rfli-eod-rate-time"
+            }
+        }
+
+      [32m+[0m[0m vpc_config {
+          [32m+[0m[0m ipv6_allowed_for_dual_stack = false
+          [32m+[0m[0m security_group_ids          = [
+              [32m+[0m[0m "sg-0591b309a73f15dd4",
+            ]
+          [32m+[0m[0m subnet_ids                  = [
+              [32m+[0m[0m "subnet-029ff558e3c118433",
+              [32m+[0m[0m "subnet-0d5ac5d3b65e2950e",
+            ]
+          [32m+[0m[0m vpc_id                      = (known after apply)
+        }
+    }
+
+[1m  # aws_lambda_function.layer_issuers[0m will be created
+[0m  [32m+[0m[0m resource "aws_lambda_function" "layer_issuers" {
+      [32m+[0m[0m architectures                  = (known after apply)
+      [32m+[0m[0m arn                            = (known after apply)
+      [32m+[0m[0m filename                       = "lbd-rfli-layer-isin-search-issuers.zip"
+      [32m+[0m[0m function_name                  = "lbd-dev-rfli-layer-isin-search-issuers"
+      [32m+[0m[0m handler                        = "lambda_function.lambda_handler"
+      [32m+[0m[0m id                             = (known after apply)
+      [32m+[0m[0m invoke_arn                     = (known after apply)
+      [32m+[0m[0m last_modified                  = (known after apply)
+      [32m+[0m[0m memory_size                    = 128
+      [32m+[0m[0m package_type                   = "Zip"
+      [32m+[0m[0m publish                        = false
+      [32m+[0m[0m qualified_arn                  = (known after apply)
+      [32m+[0m[0m qualified_invoke_arn           = (known after apply)
+      [32m+[0m[0m reserved_concurrent_executions = -1
+      [32m+[0m[0m role                           = (known after apply)
+      [32m+[0m[0m runtime                        = "python3.9"
+      [32m+[0m[0m signing_job_arn                = (known after apply)
+      [32m+[0m[0m signing_profile_version_arn    = (known after apply)
+      [32m+[0m[0m skip_destroy                   = false
+      [32m+[0m[0m source_code_hash               = "RzWXBvx4PU88oia8JdHEh14gTah/8Swlx7/UnZeDbv0="
+      [32m+[0m[0m source_code_size               = (known after apply)
+      [32m+[0m[0m tags_all                       = (known after apply)
+      [32m+[0m[0m timeout                        = 3
+      [32m+[0m[0m version                        = (known after apply)
+
+      [32m+[0m[0m vpc_config {
+          [32m+[0m[0m ipv6_allowed_for_dual_stack = false
+          [32m+[0m[0m security_group_ids          = [
+              [32m+[0m[0m "sg-0591b309a73f15dd4",
+            ]
+          [32m+[0m[0m subnet_ids                  = [
+              [32m+[0m[0m "subnet-029ff558e3c118433",
+              [32m+[0m[0m "subnet-0d5ac5d3b65e2950e",
+            ]
+          [32m+[0m[0m vpc_id                      = (known after apply)
+        }
+    }
+
+[1m  # aws_lambda_function.layer_titles[0m will be created
+[0m  [32m+[0m[0m resource "aws_lambda_function" "layer_titles" {
+      [32m+[0m[0m architectures                  = (known after apply)
+      [32m+[0m[0m arn                            = (known after apply)
+      [32m+[0m[0m filename                       = "lbd-rfli-layer-isin-search-titles.zip"
+      [32m+[0m[0m function_name                  = "lbd-dev-rfli-layer-isin-search-titles"
+      [32m+[0m[0m handler                        = "lambda_function.lambda_handler"
+      [32m+[0m[0m id                             = (known after apply)
+      [32m+[0m[0m invoke_arn                     = (known after apply)
+      [32m+[0m[0m last_modified                  = (known after apply)
+      [32m+[0m[0m memory_size                    = 128
+      [32m+[0m[0m package_type                   = "Zip"
+      [32m+[0m[0m publish                        = false
+      [32m+[0m[0m qualified_arn                  = (known after apply)
+      [32m+[0m[0m qualified_invoke_arn           = (known after apply)
+      [32m+[0m[0m reserved_concurrent_executions = -1
+      [32m+[0m[0m role                           = (known after apply)
+      [32m+[0m[0m runtime                        = "python3.9"
+      [32m+[0m[0m signing_job_arn                = (known after apply)
+      [32m+[0m[0m signing_profile_version_arn    = (known after apply)
+      [32m+[0m[0m skip_destroy                   = false
+      [32m+[0m[0m source_code_hash               = "fj4Qr3UTk8CVRf5B+0oqvI5D0DyWD6GUDr0zFloAGMM="
+      [32m+[0m[0m source_code_size               = (known after apply)
+      [32m+[0m[0m tags_all                       = (known after apply)
+      [32m+[0m[0m timeout                        = 10
+      [32m+[0m[0m version                        = (known after apply)
+
+      [32m+[0m[0m environment {
+          [32m+[0m[0m variables = {
+              [32m+[0m[0m "MARKET_RATE" = "ps-dev-rfli-eod-rate-time"
+            }
+        }
+
+      [32m+[0m[0m vpc_config {
+          [32m+[0m[0m ipv6_allowed_for_dual_stack = false
+          [32m+[0m[0m security_group_ids          = [
+              [32m+[0m[0m "sg-0591b309a73f15dd4",
+            ]
+          [32m+[0m[0m subnet_ids                  = [
+              [32m+[0m[0m "subnet-029ff558e3c118433",
+              [32m+[0m[0m "subnet-0d5ac5d3b65e2950e",
+            ]
+          [32m+[0m[0m vpc_id                      = (known after apply)
+        }
+    }
+
+[1m  # aws_lambda_function.trigger_eod[0m will be created
+[0m  [32m+[0m[0m resource "aws_lambda_function" "trigger_eod" {
+      [32m+[0m[0m architectures                  = (known after apply)
+      [32m+[0m[0m arn                            = (known after apply)
+      [32m+[0m[0m filename                       = "lbd-rfli-trigger-isin-search-eod.zip"
+      [32m+[0m[0m function_name                  = "lbd-dev-rfli-trigger-isin-search-eod"
+      [32m+[0m[0m handler                        = "lambda_function.lambda_handler"
+      [32m+[0m[0m id                             = (known after apply)
+      [32m+[0m[0m invoke_arn                     = (known after apply)
+      [32m+[0m[0m last_modified                  = (known after apply)
+      [32m+[0m[0m memory_size                    = 128
+      [32m+[0m[0m package_type                   = "Zip"
+      [32m+[0m[0m publish                        = false
+      [32m+[0m[0m qualified_arn                  = (known after apply)
+      [32m+[0m[0m qualified_invoke_arn           = (known after apply)
+      [32m+[0m[0m reserved_concurrent_executions = -1
+      [32m+[0m[0m role                           = (known after apply)
+      [32m+[0m[0m runtime                        = "python3.9"
+      [32m+[0m[0m signing_job_arn                = (known after apply)
+      [32m+[0m[0m signing_profile_version_arn    = (known after apply)
+      [32m+[0m[0m skip_destroy                   = false
+      [32m+[0m[0m source_code_hash               = "mBlisKGel63X48Cc9i2YxMcBuiej3JuhbRpILQI+/Fc="
+      [32m+[0m[0m source_code_size               = (known after apply)
+      [32m+[0m[0m tags_all                       = (known after apply)
+      [32m+[0m[0m timeout                        = 3
+      [32m+[0m[0m version                        = (known after apply)
+
+      [32m+[0m[0m environment {
+          [32m+[0m[0m variables = {
+              [32m+[0m[0m "JOB_NAME" = "glue-dev-rfli-etl-isin-search-eod"
+            }
+        }
+
+      [32m+[0m[0m vpc_config {
+          [32m+[0m[0m ipv6_allowed_for_dual_stack = false
+          [32m+[0m[0m security_group_ids          = [
+              [32m+[0m[0m "sg-0591b309a73f15dd4",
+            ]
+          [32m+[0m[0m subnet_ids                  = [
+              [32m+[0m[0m "subnet-029ff558e3c118433",
+              [32m+[0m[0m "subnet-0d5ac5d3b65e2950e",
+            ]
+          [32m+[0m[0m vpc_id                      = (known after apply)
+        }
+    }
+
+[1m  # aws_lambda_function.trigger_intra[0m will be created
+[0m  [32m+[0m[0m resource "aws_lambda_function" "trigger_intra" {
+      [32m+[0m[0m architectures                  = (known after apply)
+      [32m+[0m[0m arn                            = (known after apply)
+      [32m+[0m[0m filename                       = "lbd-rfli-trigger-isin-search-intra.zip"
+      [32m+[0m[0m function_name                  = "lbd-dev-rfli-trigger-isin-search-intra"
+      [32m+[0m[0m handler                        = "lambda_function.lambda_handler"
+      [32m+[0m[0m id                             = (known after apply)
+      [32m+[0m[0m invoke_arn                     = (known after apply)
+      [32m+[0m[0m last_modified                  = (known after apply)
+      [32m+[0m[0m memory_size                    = 128
+      [32m+[0m[0m package_type                   = "Zip"
+      [32m+[0m[0m publish                        = false
+      [32m+[0m[0m qualified_arn                  = (known after apply)
+      [32m+[0m[0m qualified_invoke_arn           = (known after apply)
+      [32m+[0m[0m reserved_concurrent_executions = -1
+      [32m+[0m[0m role                           = (known after apply)
+      [32m+[0m[0m runtime                        = "python3.9"
+      [32m+[0m[0m signing_job_arn                = (known after apply)
+      [32m+[0m[0m signing_profile_version_arn    = (known after apply)
+      [32m+[0m[0m skip_destroy                   = false
+      [32m+[0m[0m source_code_hash               = "FsVIpykUwMizEodepFzCJdVxmg/8r1ZmtCoW4lSUukI="
+      [32m+[0m[0m source_code_size               = (known after apply)
+      [32m+[0m[0m tags_all                       = (known after apply)
+      [32m+[0m[0m timeout                        = 3
+      [32m+[0m[0m version                        = (known after apply)
+
+      [32m+[0m[0m environment {
+          [32m+[0m[0m variables = {
+              [32m+[0m[0m "JOB_NAME" = "glue-dev-rfli-etl-isin-search-intra"
+            }
+        }
+
+      [32m+[0m[0m vpc_config {
+          [32m+[0m[0m ipv6_allowed_for_dual_stack = false
+          [32m+[0m[0m security_group_ids          = [
+              [32m+[0m[0m "sg-0591b309a73f15dd4",
+            ]
+          [32m+[0m[0m subnet_ids                  = [
+              [32m+[0m[0m "subnet-029ff558e3c118433",
+              [32m+[0m[0m "subnet-0d5ac5d3b65e2950e",
+            ]
+          [32m+[0m[0m vpc_id                      = (known after apply)
+        }
+    }
+
+[1m  # aws_lambda_permission.isines_lambda_permission[0m will be created
+[0m  [32m+[0m[0m resource "aws_lambda_permission" "isines_lambda_permission" {
+      [32m+[0m[0m action              = "lambda:InvokeFunction"
+      [32m+[0m[0m function_name       = "lbd-dev-rfli-layer-isin-search-isines"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m principal           = "apigateway.amazonaws.com"
+      [32m+[0m[0m statement_id        = (known after apply)
+      [32m+[0m[0m statement_id_prefix = (known after apply)
+    }
+
+[1m  # aws_lambda_permission.issuers_lambda_permission[0m will be created
+[0m  [32m+[0m[0m resource "aws_lambda_permission" "issuers_lambda_permission" {
+      [32m+[0m[0m action              = "lambda:InvokeFunction"
+      [32m+[0m[0m function_name       = "lbd-dev-rfli-layer-isin-search-issuers"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m principal           = "apigateway.amazonaws.com"
+      [32m+[0m[0m statement_id        = (known after apply)
+      [32m+[0m[0m statement_id_prefix = (known after apply)
+    }
+
+[1m  # aws_lambda_permission.titles_lambda_permission[0m will be created
+[0m  [32m+[0m[0m resource "aws_lambda_permission" "titles_lambda_permission" {
+      [32m+[0m[0m action              = "lambda:InvokeFunction"
+      [32m+[0m[0m function_name       = "lbd-dev-rfli-layer-isin-search-titles"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m principal           = "apigateway.amazonaws.com"
+      [32m+[0m[0m statement_id        = (known after apply)
+      [32m+[0m[0m statement_id_prefix = (known after apply)
+    }
+
+[1m  # aws_lambda_permission.trigger_all_eod[0m will be created
+[0m  [32m+[0m[0m resource "aws_lambda_permission" "trigger_all_eod" {
+      [32m+[0m[0m action              = "lambda:InvokeFunction"
+      [32m+[0m[0m function_name       = "lbd-dev-rfli-trigger-isin-search-eod"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m principal           = "sns.amazonaws.com"
+      [32m+[0m[0m source_arn          = "arn:aws:sns:us-east-1:841224051934:sns-dev-rfli-trigger-all-eod"
+      [32m+[0m[0m statement_id        = "AllowExecutionFromSNS"
+      [32m+[0m[0m statement_id_prefix = (known after apply)
+    }
+
+[1m  # aws_lambda_permission.trigger_all_intra[0m will be created
+[0m  [32m+[0m[0m resource "aws_lambda_permission" "trigger_all_intra" {
+      [32m+[0m[0m action              = "lambda:InvokeFunction"
+      [32m+[0m[0m function_name       = "lbd-dev-rfli-trigger-isin-search-intra"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m principal           = "sns.amazonaws.com"
+      [32m+[0m[0m source_arn          = "arn:aws:sns:us-east-1:841224051934:sns-dev-rfli-trigger-all-intra"
+      [32m+[0m[0m statement_id        = "AllowExecutionFromSNS"
+      [32m+[0m[0m statement_id_prefix = (known after apply)
+    }
+
+[1m  # aws_s3_bucket.component_code[0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_bucket" "component_code" {
+      [32m+[0m[0m acceleration_status         = (known after apply)
+      [32m+[0m[0m acl                         = (known after apply)
+      [32m+[0m[0m arn                         = (known after apply)
+      [32m+[0m[0m bucket                      = "s3-dev-rfli-isin-search-code"
+      [32m+[0m[0m bucket_domain_name          = (known after apply)
+      [32m+[0m[0m bucket_prefix               = (known after apply)
+      [32m+[0m[0m bucket_regional_domain_name = (known after apply)
+      [32m+[0m[0m force_destroy               = true
+      [32m+[0m[0m hosted_zone_id              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m object_lock_enabled         = (known after apply)
+      [32m+[0m[0m policy                      = (known after apply)
+      [32m+[0m[0m region                      = (known after apply)
+      [32m+[0m[0m request_payer               = (known after apply)
+      [32m+[0m[0m tags_all                    = (known after apply)
+      [32m+[0m[0m website_domain              = (known after apply)
+      [32m+[0m[0m website_endpoint            = (known after apply)
+    }
+
+[1m  # aws_s3_object.etl_eod_code[0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_object" "etl_eod_code" {
+      [32m+[0m[0m acl                    = (known after apply)
+      [32m+[0m[0m bucket                 = "s3-dev-rfli-isin-search-code"
+      [32m+[0m[0m bucket_key_enabled     = (known after apply)
+      [32m+[0m[0m checksum_crc32         = (known after apply)
+      [32m+[0m[0m checksum_crc32c        = (known after apply)
+      [32m+[0m[0m checksum_sha1          = (known after apply)
+      [32m+[0m[0m checksum_sha256        = (known after apply)
+      [32m+[0m[0m content_type           = (known after apply)
+      [32m+[0m[0m etag                   = (known after apply)
+      [32m+[0m[0m force_destroy          = true
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m key                    = "glue-rfli-etl-isin-search-eod.py"
+      [32m+[0m[0m kms_key_id             = (known after apply)
+      [32m+[0m[0m server_side_encryption = (known after apply)
+      [32m+[0m[0m source                 = "../code/glue-rfli-etl-isin-search-eod.py"
+      [32m+[0m[0m storage_class          = (known after apply)
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m version_id             = (known after apply)
+    }
+
+[1m  # aws_s3_object.etl_init_code[0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_object" "etl_init_code" {
+      [32m+[0m[0m acl                    = (known after apply)
+      [32m+[0m[0m bucket                 = "s3-dev-rfli-isin-search-code"
+      [32m+[0m[0m bucket_key_enabled     = (known after apply)
+      [32m+[0m[0m checksum_crc32         = (known after apply)
+      [32m+[0m[0m checksum_crc32c        = (known after apply)
+      [32m+[0m[0m checksum_sha1          = (known after apply)
+      [32m+[0m[0m checksum_sha256        = (known after apply)
+      [32m+[0m[0m content_type           = (known after apply)
+      [32m+[0m[0m etag                   = (known after apply)
+      [32m+[0m[0m force_destroy          = true
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m key                    = "glue-rfli-init-isin-search.py"
+      [32m+[0m[0m kms_key_id             = (known after apply)
+      [32m+[0m[0m server_side_encryption = (known after apply)
+      [32m+[0m[0m source                 = "../code/glue-rfli-init-isin-search.py"
+      [32m+[0m[0m storage_class          = (known after apply)
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m version_id             = (known after apply)
+    }
+
+[1m  # aws_s3_object.etl_intra_code[0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_object" "etl_intra_code" {
+      [32m+[0m[0m acl                    = (known after apply)
+      [32m+[0m[0m bucket                 = "s3-dev-rfli-isin-search-code"
+      [32m+[0m[0m bucket_key_enabled     = (known after apply)
+      [32m+[0m[0m checksum_crc32         = (known after apply)
+      [32m+[0m[0m checksum_crc32c        = (known after apply)
+      [32m+[0m[0m checksum_sha1          = (known after apply)
+      [32m+[0m[0m checksum_sha256        = (known after apply)
+      [32m+[0m[0m content_type           = (known after apply)
+      [32m+[0m[0m etag                   = (known after apply)
+      [32m+[0m[0m force_destroy          = true
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m key                    = "glue-rfli-etl-isin-search-intra.py"
+      [32m+[0m[0m kms_key_id             = (known after apply)
+      [32m+[0m[0m server_side_encryption = (known after apply)
+      [32m+[0m[0m source                 = "../code/glue-rfli-etl-isin-search-intra.py"
+      [32m+[0m[0m storage_class          = (known after apply)
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m version_id             = (known after apply)
+    }
+
+[1m  # aws_secretsmanager_secret.db[0m will be created
+[0m  [32m+[0m[0m resource "aws_secretsmanager_secret" "db" {
+      [32m+[0m[0m arn                            = (known after apply)
+      [32m+[0m[0m description                    = "Secreto con las credenciales de db para el componente isin-search"
+      [32m+[0m[0m force_overwrite_replica_secret = false
+      [32m+[0m[0m id                             = (known after apply)
+      [32m+[0m[0m name                           = "sm-dev-rfli-isin-search-db"
+      [32m+[0m[0m name_prefix                    = (known after apply)
+      [32m+[0m[0m policy                         = (known after apply)
+      [32m+[0m[0m recovery_window_in_days        = 0
+      [32m+[0m[0m tags_all                       = (known after apply)
+    }
+
+[1m  # aws_secretsmanager_secret.mail[0m will be created
+[0m  [32m+[0m[0m resource "aws_secretsmanager_secret" "mail" {
+      [32m+[0m[0m arn                            = (known after apply)
+      [32m+[0m[0m description                    = "Secreto con las credenciales de mail para el componente isin-search"
+      [32m+[0m[0m force_overwrite_replica_secret = false
+      [32m+[0m[0m id                             = (known after apply)
+      [32m+[0m[0m name                           = "sm-dev-rfli-isin-search-mail"
+      [32m+[0m[0m name_prefix                    = (known after apply)
+      [32m+[0m[0m policy                         = (known after apply)
+      [32m+[0m[0m recovery_window_in_days        = 0
+      [32m+[0m[0m tags_all                       = (known after apply)
+    }
+
+[1m  # aws_secretsmanager_secret_version.db_value[0m will be created
+[0m  [32m+[0m[0m resource "aws_secretsmanager_secret_version" "db_value" {
+      [32m+[0m[0m arn            = (known after apply)
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m secret_id      = (known after apply)
+      [32m+[0m[0m secret_string  = (sensitive value)
+      [32m+[0m[0m version_id     = (known after apply)
+      [32m+[0m[0m version_stages = (known after apply)
+    }
+
+[1m  # aws_secretsmanager_secret_version.mail_value[0m will be created
+[0m  [32m+[0m[0m resource "aws_secretsmanager_secret_version" "mail_value" {
+      [32m+[0m[0m arn            = (known after apply)
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m secret_id      = (known after apply)
+      [32m+[0m[0m secret_string  = (sensitive value)
+      [32m+[0m[0m version_id     = (known after apply)
+      [32m+[0m[0m version_stages = (known after apply)
+    }
+
+[1m  # aws_sns_topic_subscription.trigger_all_eod[0m will be created
+[0m  [32m+[0m[0m resource "aws_sns_topic_subscription" "trigger_all_eod" {
+      [32m+[0m[0m arn                             = (known after apply)
+      [32m+[0m[0m confirmation_timeout_in_minutes = 1
+      [32m+[0m[0m confirmation_was_authenticated  = (known after apply)
+      [32m+[0m[0m endpoint                        = (known after apply)
+      [32m+[0m[0m endpoint_auto_confirms          = false
+      [32m+[0m[0m filter_policy_scope             = (known after apply)
+      [32m+[0m[0m id                              = (known after apply)
+      [32m+[0m[0m owner_id                        = (known after apply)
+      [32m+[0m[0m pending_confirmation            = (known after apply)
+      [32m+[0m[0m protocol                        = "lambda"
+      [32m+[0m[0m raw_message_delivery            = false
+      [32m+[0m[0m topic_arn                       = "arn:aws:sns:us-east-1:841224051934:sns-dev-rfli-trigger-all-eod"
+    }
+
+[1m  # aws_sns_topic_subscription.trigger_all_intra[0m will be created
+[0m  [32m+[0m[0m resource "aws_sns_topic_subscription" "trigger_all_intra" {
+      [32m+[0m[0m arn                             = (known after apply)
+      [32m+[0m[0m confirmation_timeout_in_minutes = 1
+      [32m+[0m[0m confirmation_was_authenticated  = (known after apply)
+      [32m+[0m[0m endpoint                        = (known after apply)
+      [32m+[0m[0m endpoint_auto_confirms          = false
+      [32m+[0m[0m filter_policy_scope             = (known after apply)
+      [32m+[0m[0m id                              = (known after apply)
+      [32m+[0m[0m owner_id                        = (known after apply)
+      [32m+[0m[0m pending_confirmation            = (known after apply)
+      [32m+[0m[0m protocol                        = "lambda"
+      [32m+[0m[0m raw_message_delivery            = false
+      [32m+[0m[0m topic_arn                       = "arn:aws:sns:us-east-1:841224051934:sns-dev-rfli-trigger-all-intra"
+    }
+
+[1m  # null_resource.cli_commands[0m will be created
+[0m  [32m+[0m[0m resource "null_resource" "cli_commands" {
+      [32m+[0m[0m id = (known after apply)
+    }
+
+[1mPlan:[0m 106 to add, 0 to change, 0 to destroy.
+[0m[0m[1maws_api_gateway_resource.component: Creating...[0m[0m
+[0m[1maws_iam_policy.vpc: Creating...[0m[0m
+[0m[1maws_iam_role.etl_intra: Creating...[0m[0m
+[0m[1maws_iam_role.etl_init: Creating...[0m[0m
+[0m[1maws_iam_role.trigger_eod: Creating...[0m[0m
+[0m[1maws_iam_role.layer_issuers: Creating...[0m[0m
+[0m[1maws_iam_role.etl_eod: Creating...[0m[0m
+[0m[1maws_iam_role.trigger_intra: Creating...[0m[0m
+[0m[1maws_dynamodb_table.all_isines: Creating...[0m[0m
+[0m[1maws_s3_bucket.component_code: Creating...[0m[0m
+[0m[1maws_api_gateway_resource.component: Creation complete after 0s [id=hkk5ne][0m
+[0m[1maws_dynamodb_table.issuers: Creating...[0m[0m
+[0m[1maws_iam_policy.vpc: Creation complete after 1s [id=arn:aws:iam::841224051934:policy/policy-rfli-isin-search-vpc][0m
+[0m[1maws_iam_policy.log: Creating...[0m[0m
+[0m[1maws_iam_role.trigger_intra: Creation complete after 1s [id=rol-dev-lbd-rfli-trigger-isin-search-intra][0m
+[0m[1maws_iam_role.etl_eod: Creation complete after 1s [id=rol-dev-glue-rfli-etl-isin-search-eod][0m
+[0m[1maws_iam_role.layer_titles: Creating...[0m[0m
+[0m[1maws_iam_role.trigger_eod: Creation complete after 1s [id=rol-dev-lbd-rfli-trigger-isin-search-eod][0m
+[0m[1maws_iam_role.layer_issuers: Creation complete after 1s [id=rol-dev-lbd-layer-rfli-isin-search-issuers][0m
+[0m[1maws_secretsmanager_secret.db: Creating...[0m[0m
+[0m[1maws_iam_role.etl_intra: Creation complete after 1s [id=rol-dev-glue-rfli-etl-isin-search-intra][0m
+[0m[1maws_secretsmanager_secret.mail: Creating...[0m[0m
+[0m[1maws_api_gateway_resource.titles: Creating...[0m[0m
+[0m[1maws_iam_role.layer_isines: Creating...[0m[0m
+[0m[1maws_iam_role.etl_init: Creation complete after 1s [id=role-dev-glue-rfli-init-isin-search][0m
+[0m[1maws_api_gateway_resource.issuers: Creating...[0m[0m
+[0m[1maws_iam_policy.log: Creation complete after 0s [id=arn:aws:iam::841224051934:policy/policy-rfli-isin-search-log][0m
+[0m[1maws_api_gateway_resource.titles: Creation complete after 0s [id=kuhrk4][0m
+[0m[1maws_iam_role_policy_attachment.trigger_intra_rol_with_vpc_policy: Creating...[0m[0m
+[0m[1maws_api_gateway_resource.isines: Creating...[0m[0m
+[0m[1maws_api_gateway_resource.issuers: Creation complete after 0s [id=7lfy3s][0m
+[0m[1maws_iam_role_policy_attachment.etl_eod_rol_with_vpc_policy: Creating...[0m[0m
+[0m[1maws_iam_role.layer_titles: Creation complete after 0s [id=rol-dev-lbd-layer-rfli-isin-search-titles][0m
+[0m[1maws_iam_role_policy_attachment.trigger_eod_rol_with_vpc_policy: Creating...[0m[0m
+[0m[1maws_iam_role.layer_isines: Creation complete after 0s [id=rol-dev-lbd-layer-rfli-isin-search-isines][0m
+[0m[1maws_secretsmanager_secret.db: Creation complete after 0s [id=arn:aws:secretsmanager:us-east-1:841224051934:secret:sm-dev-rfli-isin-search-db-De0bXg][0m
+[0m[1maws_iam_role_policy_attachment.layer_issuers_rol_with_vpc_policy: Creating...[0m[0m
+[0m[1maws_lambda_function.layer_issuers: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.trigger_eod_rol_with_vpc_policy: Creation complete after 0s [id=rol-dev-lbd-rfli-trigger-isin-search-eod-20231204210701293900000001][0m
+[0m[1maws_iam_role_policy_attachment.trigger_intra_rol_with_vpc_policy: Creation complete after 0s [id=rol-dev-lbd-rfli-trigger-isin-search-intra-20231204210701293900000002][0m
+[0m[1maws_secretsmanager_secret.mail: Creation complete after 0s [id=arn:aws:secretsmanager:us-east-1:841224051934:secret:sm-dev-rfli-isin-search-mail-FZooM7][0m
+[0m[1maws_iam_role_policy_attachment.etl_intra_rol_with_vpc_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_intra_rol_with_log_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_init_rol_with_vpc_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_eod_rol_with_vpc_policy: Creation complete after 0s [id=rol-dev-glue-rfli-etl-isin-search-eod-20231204210701325000000003][0m
+[0m[1maws_api_gateway_resource.isines: Creation complete after 0s [id=1w0ayx][0m
+[0m[1maws_iam_role_policy_attachment.trigger_intra_rol_with_log_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.trigger_eod_rol_with_log_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.layer_issuers_rol_with_vpc_policy: Creation complete after 1s [id=rol-dev-lbd-layer-rfli-isin-search-issuers-20231204210701501800000004][0m
+[0m[1maws_iam_role_policy_attachment.etl_eod_rol_with_log_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_intra_rol_with_log_policy: Creation complete after 1s [id=rol-dev-glue-rfli-etl-isin-search-intra-20231204210701530500000005][0m
+[0m[1maws_iam_role_policy_attachment.etl_intra_rol_with_vpc_policy: Creation complete after 1s [id=rol-dev-glue-rfli-etl-isin-search-intra-20231204210701530500000006][0m
+[0m[1maws_iam_role_policy_attachment.etl_init_rol_with_log_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.layer_issuers_rol_with_log_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_init_rol_with_vpc_policy: Creation complete after 1s [id=role-dev-glue-rfli-init-isin-search-20231204210701545000000007][0m
+[0m[1maws_api_gateway_method.titles_options_method: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.trigger_eod_rol_with_log_policy: Creation complete after 0s [id=rol-dev-lbd-rfli-trigger-isin-search-eod-20231204210701664700000009][0m
+[0m[1maws_api_gateway_method.titles_post_method: Creating...[0m[0m
+[0m[1maws_api_gateway_method.titles_options_method: Creation complete after 0s [id=agm-xcrsy02d5f-kuhrk4-OPTIONS][0m
+[0m[1maws_api_gateway_method.issuers_options_method: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.trigger_intra_rol_with_log_policy: Creation complete after 0s [id=rol-dev-lbd-rfli-trigger-isin-search-intra-20231204210701660700000008][0m
+[0m[1maws_iam_role_policy_attachment.layer_titles_rol_with_vpc_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_eod_rol_with_log_policy: Creation complete after 0s [id=rol-dev-glue-rfli-etl-isin-search-eod-2023120421070174950000000a][0m
+[0m[1maws_iam_role_policy_attachment.layer_issuers_rol_with_log_policy: Creation complete after 0s [id=rol-dev-lbd-layer-rfli-isin-search-issuers-2023120421070176780000000b][0m
+[0m[1maws_iam_role_policy_attachment.etl_init_rol_with_log_policy: Creation complete after 0s [id=role-dev-glue-rfli-init-isin-search-2023120421070177490000000c][0m
+[0m[1maws_api_gateway_method.issuers_get_method: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.layer_isines_rol_with_vpc_policy: Creating...[0m[0m
+[0m[1maws_api_gateway_method.titles_post_method: Creation complete after 0s [id=agm-xcrsy02d5f-kuhrk4-POST][0m
+[0m[1maws_lambda_function.layer_titles: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.layer_titles_rol_with_log_policy: Creating...[0m[0m
+[0m[1maws_api_gateway_method.issuers_options_method: Creation complete after 0s [id=agm-xcrsy02d5f-7lfy3s-OPTIONS][0m
+[0m[1maws_iam_role_policy_attachment.layer_isines_rol_with_log_policy: Creating...[0m[0m
+[0m[1maws_api_gateway_method.issuers_get_method: Creation complete after 0s [id=agm-xcrsy02d5f-7lfy3s-GET][0m
+[0m[1maws_lambda_function.layer_isines: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.layer_titles_rol_with_vpc_policy: Creation complete after 0s [id=rol-dev-lbd-layer-rfli-isin-search-titles-2023120421070195730000000d][0m
+[0m[1maws_secretsmanager_secret_version.db_value: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.layer_isines_rol_with_vpc_policy: Creation complete after 0s [id=rol-dev-lbd-layer-rfli-isin-search-isines-2023120421070201970000000e][0m
+[0m[1maws_secretsmanager_secret_version.mail_value: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.layer_titles_rol_with_log_policy: Creation complete after 0s [id=rol-dev-lbd-layer-rfli-isin-search-titles-2023120421070205630000000f][0m
+[0m[1maws_iam_policy.secrets: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.layer_isines_rol_with_log_policy: Creation complete after 0s [id=rol-dev-lbd-layer-rfli-isin-search-isines-20231204210702074300000010][0m
+[0m[1maws_api_gateway_method.isines_options_method: Creating...[0m[0m
+[0m[1maws_api_gateway_method.isines_options_method: Creation complete after 0s [id=agm-xcrsy02d5f-1w0ayx-OPTIONS][0m
+[0m[1maws_secretsmanager_secret_version.db_value: Creation complete after 0s [id=arn:aws:secretsmanager:us-east-1:841224051934:secret:sm-dev-rfli-isin-search-db-De0bXg|377B335D-A4B8-4903-AB94-CF5F53AC2FAD][0m
+[0m[1maws_secretsmanager_secret_version.mail_value: Creation complete after 0s [id=arn:aws:secretsmanager:us-east-1:841224051934:secret:sm-dev-rfli-isin-search-mail-FZooM7|3372EE41-4653-423C-BC6A-C6575390C63B][0m
+[0m[1maws_api_gateway_method.isines_get_method: Creating...[0m[0m
+[0m[1maws_api_gateway_method_response.titles_options_response_200: Creating...[0m[0m
+[0m[1maws_api_gateway_integration.titles_options_integration: Creating...[0m[0m
+[0m[1maws_iam_policy.secrets: Creation complete after 1s [id=arn:aws:iam::841224051934:policy/policy-rfli-isin-search-secrets][0m
+[0m[1maws_api_gateway_method_response.titles_options_response_200: Creation complete after 1s [id=agmr-xcrsy02d5f-kuhrk4-OPTIONS-200][0m
+[0m[1maws_api_gateway_method.isines_get_method: Creation complete after 1s [id=agm-xcrsy02d5f-1w0ayx-GET][0m
+[0m[1maws_api_gateway_method_response.titles_post_response_200: Creating...[0m[0m
+[0m[1maws_api_gateway_method_response.issuers_get_response_200: Creating...[0m[0m
+[0m[1maws_api_gateway_method_response.issuers_options_response_200: Creating...[0m[0m
+[0m[1maws_api_gateway_integration.titles_options_integration: Creation complete after 1s [id=agi-xcrsy02d5f-kuhrk4-OPTIONS][0m
+[0m[1maws_api_gateway_integration.issuers_options_integration: Creating...[0m[0m
+[0m[1maws_api_gateway_method_response.issuers_get_response_200: Creation complete after 0s [id=agmr-xcrsy02d5f-7lfy3s-GET-200][0m
+[0m[1maws_api_gateway_method_response.isines_options_response_200: Creating...[0m[0m
+[0m[1maws_api_gateway_method_response.titles_post_response_200: Creation complete after 0s [id=agmr-xcrsy02d5f-kuhrk4-POST-200][0m
+[0m[1maws_api_gateway_integration.isines_options_integration: Creating...[0m[0m
+[0m[1maws_api_gateway_method_response.issuers_options_response_200: Creation complete after 0s [id=agmr-xcrsy02d5f-7lfy3s-OPTIONS-200][0m
+[0m[1maws_api_gateway_integration.issuers_options_integration: Creation complete after 0s [id=agi-xcrsy02d5f-7lfy3s-OPTIONS][0m
+[0m[1maws_iam_role_policy_attachment.etl_init_rol_with_secrets_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_eod_rol_with_secrets_policy: Creating...[0m[0m
+[0m[1maws_api_gateway_method_response.isines_options_response_200: Creation complete after 0s [id=agmr-xcrsy02d5f-1w0ayx-OPTIONS-200][0m
+[0m[1maws_api_gateway_integration.isines_options_integration: Creation complete after 0s [id=agi-xcrsy02d5f-1w0ayx-OPTIONS][0m
+[0m[1maws_iam_role_policy_attachment.etl_intra_rol_with_secrets_policy: Creating...[0m[0m
+[0m[1maws_api_gateway_method_response.isines_get_response_200: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_eod_rol_with_secrets_policy: Creation complete after 0s [id=rol-dev-glue-rfli-etl-isin-search-eod-20231204210703322900000012][0m
+[0m[1maws_iam_role_policy_attachment.etl_init_rol_with_secrets_policy: Creation complete after 0s [id=role-dev-glue-rfli-init-isin-search-20231204210703321800000011][0m
+[0m[1maws_api_gateway_method_response.isines_get_response_200: Creation complete after 1s [id=agmr-xcrsy02d5f-1w0ayx-GET-200][0m
+[0m[1maws_iam_role_policy_attachment.etl_intra_rol_with_secrets_policy: Creation complete after 1s [id=rol-dev-glue-rfli-etl-isin-search-intra-20231204210703432400000013][0m
+[0m[1maws_api_gateway_integration_response.issuers_options_response_200: Creating...[0m[0m
+[0m[1maws_api_gateway_integration_response.titles_options_response_200: Creating...[0m[0m
+[0m[1maws_api_gateway_integration_response.isines_options_response_200: Creating...[0m[0m
+[0m[1maws_api_gateway_integration_response.titles_options_response_200: Creation complete after 0s [id=agir-xcrsy02d5f-kuhrk4-OPTIONS-200][0m
+[0m[1maws_api_gateway_integration_response.issuers_options_response_200: Creation complete after 0s [id=agir-xcrsy02d5f-7lfy3s-OPTIONS-200][0m
+[0m[1maws_api_gateway_integration_response.isines_options_response_200: Creation complete after 0s [id=agir-xcrsy02d5f-1w0ayx-OPTIONS-200][0m
+[0m[1maws_dynamodb_table.all_isines: Creation complete after 8s [id=dnb-rfli-isin-search-all-isines][0m
+[0m[1maws_iam_policy.specify_layer_isines: Creating...[0m[0m
+[0m[1maws_iam_policy.specify_layer_titles: Creating...[0m[0m
+[0m[1maws_iam_policy.specify_etl_intra: Creating...[0m[0m
+[0m[1maws_iam_policy.specify_etl_eod: Creating...[0m[0m
+[0m[1maws_dynamodb_table.issuers: Creation complete after 7s [id=dnb-rfli-isin-search-issuers][0m
+[0m[1maws_iam_policy.specify_layer_issuers: Creating...[0m[0m
+[0m[1maws_iam_policy.specify_etl_init: Creating...[0m[0m
+[0m[1maws_iam_policy.specify_layer_titles: Creation complete after 0s [id=arn:aws:iam::841224051934:policy/policy-rfli-layer-isin-search-titles][0m
+[0m[1maws_iam_policy.specify_layer_isines: Creation complete after 0s [id=arn:aws:iam::841224051934:policy/policy-rfli-layer-isin-search-isines][0m
+[0m[1maws_iam_policy.specify_etl_eod: Creation complete after 0s [id=arn:aws:iam::841224051934:policy/policy-rfli-etl-isin-search-eod][0m
+[0m[1maws_iam_policy.specify_etl_intra: Creation complete after 0s [id=arn:aws:iam::841224051934:policy/policy-rfli-etl-isin-search-intra][0m
+[0m[1maws_iam_role_policy_attachment.layer_titles_with_specify_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.layer_isines_with_specify_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_eod_rol_with_specify_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_intra_rol_with_specify_policy: Creating...[0m[0m
+[0m[1maws_iam_policy.specify_etl_init: Creation complete after 0s [id=arn:aws:iam::841224051934:policy/policy-rfli-init-isin-search][0m
+[0m[1maws_iam_policy.specify_layer_issuers: Creation complete after 0s [id=arn:aws:iam::841224051934:policy/policy-rfli-layer-isin-search-issuers][0m
+[0m[1maws_iam_role_policy_attachment.etl_init_rol_with_specify_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.layer_issuers_with_specify_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_eod_rol_with_specify_policy: Creation complete after 0s [id=rol-dev-glue-rfli-etl-isin-search-eod-20231204210708321100000014][0m
+[0m[1maws_iam_role_policy_attachment.etl_intra_rol_with_specify_policy: Creation complete after 0s [id=rol-dev-glue-rfli-etl-isin-search-intra-20231204210708328800000015][0m
+[0m[1maws_iam_role_policy_attachment.layer_titles_with_specify_policy: Creation complete after 0s [id=rol-dev-lbd-layer-rfli-isin-search-titles-20231204210708328800000016][0m
+[0m[1maws_iam_role_policy_attachment.layer_isines_with_specify_policy: Creation complete after 0s [id=rol-dev-lbd-layer-rfli-isin-search-isines-20231204210708366700000017][0m
+[0m[1maws_iam_role_policy_attachment.layer_issuers_with_specify_policy: Creation complete after 1s [id=rol-dev-lbd-layer-rfli-isin-search-issuers-20231204210708443500000018][0m
+[0m[1maws_iam_role_policy_attachment.etl_init_rol_with_specify_policy: Creation complete after 1s [id=role-dev-glue-rfli-init-isin-search-20231204210708451900000019][0m
+[0m[1maws_s3_bucket.component_code: Still creating... [10s elapsed][0m[0m
+[0m[1maws_lambda_function.layer_issuers: Still creating... [10s elapsed][0m[0m
+[0m[1maws_lambda_function.layer_titles: Still creating... [10s elapsed][0m[0m
+[0m[1maws_lambda_function.layer_isines: Still creating... [10s elapsed][0m[0m
+[0m[1maws_lambda_function.layer_issuers: Creation complete after 16s [id=lbd-dev-rfli-layer-isin-search-issuers][0m
+[0m[1maws_lambda_permission.issuers_lambda_permission: Creating...[0m[0m
+[0m[1maws_api_gateway_integration.issuers_lambda_integration: Creating...[0m[0m
+[0m[1maws_api_gateway_integration.issuers_lambda_integration: Creation complete after 0s [id=agi-xcrsy02d5f-7lfy3s-GET][0m
+[0m[1maws_api_gateway_integration_response.issuers_get_response_200: Creating...[0m[0m
+[0m[1maws_lambda_permission.issuers_lambda_permission: Creation complete after 1s [id=terraform-2023120421071718460000001a][0m
+[0m[1maws_api_gateway_integration_response.issuers_get_response_200: Creation complete after 1s [id=agir-xcrsy02d5f-7lfy3s-GET-200][0m
+[0m[1maws_s3_bucket.component_code: Creation complete after 19s [id=s3-dev-rfli-isin-search-code][0m
+[0m[1maws_iam_policy.code_bucket: Creating...[0m[0m
+[0m[1maws_s3_object.etl_init_code: Creating...[0m[0m
+[0m[1maws_s3_object.etl_eod_code: Creating...[0m[0m
+[0m[1maws_s3_object.etl_intra_code: Creating...[0m[0m
+[0m[1maws_iam_policy.code_bucket: Creation complete after 1s [id=arn:aws:iam::841224051934:policy/policy-rfli-isin-search-bucket-code][0m
+[0m[1maws_iam_role_policy_attachment.etl_intra_rol_with_code_bucket_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_init_rol_with_code_bucket_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_eod_rol_with_code_bucket_policy: Creating...[0m[0m
+[0m[1maws_s3_object.etl_init_code: Creation complete after 1s [id=glue-rfli-init-isin-search.py][0m
+[0m[1maws_s3_object.etl_eod_code: Creation complete after 1s [id=glue-rfli-etl-isin-search-eod.py][0m
+[0m[1maws_glue_job.etl_init: Creating...[0m[0m
+[0m[1maws_glue_job.etl_eod: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.etl_init_rol_with_code_bucket_policy: Creation complete after 0s [id=role-dev-glue-rfli-init-isin-search-2023120421071994040000001b][0m
+[0m[1maws_iam_role_policy_attachment.etl_eod_rol_with_code_bucket_policy: Creation complete after 0s [id=rol-dev-glue-rfli-etl-isin-search-eod-2023120421071995380000001d][0m
+[0m[1maws_iam_role_policy_attachment.etl_intra_rol_with_code_bucket_policy: Creation complete after 0s [id=rol-dev-glue-rfli-etl-isin-search-intra-2023120421071994990000001c][0m
+[0m[1maws_s3_object.etl_intra_code: Creation complete after 1s [id=glue-rfli-etl-isin-search-intra.py][0m
+[0m[1maws_glue_job.etl_intra: Creating...[0m[0m
+[0m[1maws_glue_job.etl_init: Creation complete after 1s [id=glue-dev-rfli-init-isin-search][0m
+[0m[1maws_glue_job.etl_eod: Creation complete after 1s [id=glue-dev-rfli-etl-isin-search-eod][0m
+[0m[1maws_iam_policy.trigger_etl_init: Creating...[0m[0m
+[0m[1maws_iam_policy.specify_trigger_eod: Creating...[0m[0m
+[0m[1maws_lambda_function.trigger_eod: Creating...[0m[0m
+[0m[1maws_glue_job.etl_intra: Creation complete after 1s [id=glue-dev-rfli-etl-isin-search-intra][0m
+[0m[1maws_iam_policy.specify_trigger_intra: Creating...[0m[0m
+[0m[1maws_lambda_function.trigger_intra: Creating...[0m[0m
+[0m[1maws_iam_policy.specify_trigger_eod: Creation complete after 0s [id=arn:aws:iam::841224051934:policy/policy-rfli-trigger-isin-search-eod][0m
+[0m[1maws_iam_policy.trigger_etl_init: Creation complete after 0s [id=arn:aws:iam::841224051934:policy/policy-rfli-trigger-glue-init-isin-search][0m
+[0m[1maws_iam_role_policy_attachment.trigger_eod_with_specify_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.trigger_init_rol_with_etl_init_policy: Creating...[0m[0m
+[0m[1maws_iam_policy.specify_trigger_intra: Creation complete after 1s [id=arn:aws:iam::841224051934:policy/policy-rfli-trigger-isin-search-intra][0m
+[0m[1maws_iam_role_policy_attachment.trigger_intra_with_specify_policy: Creating...[0m[0m
+[0m[1maws_iam_role_policy_attachment.trigger_eod_with_specify_policy: Creation complete after 1s [id=rol-dev-lbd-rfli-trigger-isin-search-eod-2023120421072161800000001f][0m
+[0m[1maws_iam_role_policy_attachment.trigger_intra_with_specify_policy: Creation complete after 0s [id=rol-dev-lbd-rfli-trigger-isin-search-intra-20231204210721654500000020][0m
+[0m[1maws_iam_role_policy_attachment.trigger_init_rol_with_etl_init_policy: Creation complete after 1s [id=rol-dev-lbd-rfli-trigger-init-data-version-2023120421072161690000001e][0m
+[0m[1maws_lambda_function.layer_titles: Still creating... [20s elapsed][0m[0m
+[0m[1maws_lambda_function.layer_isines: Still creating... [20s elapsed][0m[0m
+[0m[1maws_lambda_function.layer_titles: Creation complete after 22s [id=lbd-dev-rfli-layer-isin-search-titles][0m
+[0m[1maws_lambda_permission.titles_lambda_permission: Creating...[0m[0m
+[0m[1maws_api_gateway_integration.titles_lambda_integration: Creating...[0m[0m
+[0m[1maws_lambda_permission.titles_lambda_permission: Creation complete after 0s [id=terraform-20231204210723775700000021][0m
+[0m[1maws_api_gateway_integration.titles_lambda_integration: Creation complete after 0s [id=agi-xcrsy02d5f-kuhrk4-POST][0m
+[0m[1maws_api_gateway_integration_response.titles_post_response_200: Creating...[0m[0m
+[0m[1maws_api_gateway_integration_response.titles_post_response_200: Creation complete after 0s [id=agir-xcrsy02d5f-kuhrk4-POST-200][0m
+[0m[1maws_lambda_function.layer_isines: Creation complete after 28s [id=lbd-dev-rfli-layer-isin-search-isines][0m
+[0m[1maws_lambda_permission.isines_lambda_permission: Creating...[0m[0m
+[0m[1maws_api_gateway_integration.isines_lambda_integration: Creating...[0m[0m
+[0m[1maws_lambda_permission.isines_lambda_permission: Creation complete after 1s [id=terraform-20231204210730362300000022][0m
+[0m[1maws_api_gateway_integration.isines_lambda_integration: Creation complete after 1s [id=agi-xcrsy02d5f-1w0ayx-GET][0m
+[0m[1maws_api_gateway_integration_response.isines_get_response_200: Creating...[0m[0m
+[0m[1maws_api_gateway_integration_response.isines_get_response_200: Creation complete after 0s [id=agir-xcrsy02d5f-1w0ayx-GET-200][0m
+[0m[1mnull_resource.cli_commands: Creating...[0m[0m
+[0m[1mnull_resource.cli_commands: Provisioning with 'local-exec'...[0m[0m
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0mExecuting: ["cmd" "/C" "aws apigateway create-deployment --rest-api-id xcrsy02d5f --stage-name dev"]
+[0m[1maws_lambda_function.trigger_eod: Still creating... [10s elapsed][0m[0m
+[0m[1maws_lambda_function.trigger_intra: Still creating... [10s elapsed][0m[0m
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0m{
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0m    "id": "ja2gby",
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0m    "createdDate": "2023-12-04T16:07:33-05:00"
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0m}
+[0m[1mnull_resource.cli_commands: Provisioning with 'local-exec'...[0m[0m
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0mExecuting: ["cmd" "/C" "mkdir backup_20231204_210657"]
+[0m[1mnull_resource.cli_commands: Provisioning with 'local-exec'...[0m[0m
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0mExecuting: ["cmd" "/C" "aws s3 cp s3://s3-dev-rfli-curve-compare-code/glue-rfli-init-data-version.py backup_20231204_210657"]
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0mCompleted 11.9 KiB/11.9 KiB (30.0 KiB/s) with 1 file(s) remaining
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0mdownload: s3://s3-dev-rfli-curve-compare-code/glue-rfli-init-data-version.py to backup_20231204_210657\glue-rfli-init-data-version.py
+[0m[1mnull_resource.cli_commands: Provisioning with 'local-exec'...[0m[0m
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0mExecuting: ["cmd" "/C" "aws s3 cp glue-rfli-init-data-version.py s3://s3-dev-rfli-curve-compare-code/glue-rfli-init-data-version.py"]
+[0m[1maws_lambda_function.trigger_eod: Creation complete after 16s [id=lbd-dev-rfli-trigger-isin-search-eod][0m
+[0m[1maws_lambda_permission.trigger_all_eod: Creating...[0m[0m
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0mCompleted 12.1 KiB/12.1 KiB (17.3 KiB/s) with 1 file(s) remaining
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0mupload: .\glue-rfli-init-data-version.py to s3://s3-dev-rfli-curve-compare-code/glue-rfli-init-data-version.py
+[0m[1maws_lambda_permission.trigger_all_eod: Creation complete after 0s [id=AllowExecutionFromSNS][0m
+[0m[1maws_sns_topic_subscription.trigger_all_eod: Creating...[0m[0m
+[0m[1mnull_resource.cli_commands: Provisioning with 'local-exec'...[0m[0m
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0mExecuting: ["cmd" "/C" "curl -o backup_20231204_210657/lbd-rfli-trigger-init-data-version.zip $(aws lambda get-function --function-name lbd-dev-rfli-trigger-init-data-version | jq -r '.Code.Location'); aws lambda get-function --function-name lbd-dev-rfli-trigger-init-data-version > $BACKUP_FOLDER/$code_backup.json"]
+[0m[1mnull_resource.cli_commands (local-exec):[0m [0mEl sistema no puede encontrar la ruta especificada.
+[0m[1maws_sns_topic_subscription.trigger_all_eod: Creation complete after 1s [id=arn:aws:sns:us-east-1:841224051934:sns-dev-rfli-trigger-all-eod:dd434b39-d1a2-4b90-8058-fa750ddf449a][0m
+[0m[1maws_lambda_function.trigger_intra: Still creating... [20s elapsed][0m[0m
+[0m[1maws_lambda_function.trigger_intra: Creation complete after 23s [id=lbd-dev-rfli-trigger-isin-search-intra][0m
+[0m[1maws_lambda_permission.trigger_all_intra: Creating...[0m[0m
+[0m[1maws_lambda_permission.trigger_all_intra: Creation complete after 0s [id=AllowExecutionFromSNS][0m
+[0m[1maws_sns_topic_subscription.trigger_all_intra: Creating...[0m[0m
+[0m[1maws_sns_topic_subscription.trigger_all_intra: Creation complete after 1s [id=arn:aws:sns:us-east-1:841224051934:sns-dev-rfli-trigger-all-intra:0df96137-c61f-4d69-b623-ac594146a8ef][0m

@@ -1,0 +1,2 @@
+<input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="result" [ngbTypeahead]="search" (selectItem)="emitSelectedValue($event)" (keydown)="keydown($event)" #typeahead (click)="openTypeahead()" />
+

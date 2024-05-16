@@ -1,0 +1,183 @@
+<div style="height: 100%; margin-top: 5px; margin-left: 5px">
+  <div style="position: absolute; height: 90%; width: 99%; overflow-y: auto">
+    <div style="display: flex; flex-direction: row; padding: 10px 20px 0px 20px">
+      <div class="btn-group" role="group" style="width: 100%" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
+        <label class="btn btn-outline-success" for="btnradio1"><b>Variación por TIR promedio</b></label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" disabled />
+        <label class="btn btn-outline-success" for="btnradio2"><b>ISINES con mayor variación</b></label>
+      </div>
+    </div>
+    <div style="display: flex; width: 100%">
+      <app-update-indicator [date]="fechaString" [blinking]="seeIndicator" [version]="version"
+        style="margin: 10px 0px 0px 15px"></app-update-indicator>
+      <span class="tool-tip-position" [ngbTooltip]="mensajeTooltip">
+        <i class="bi bi-question-circle"></i>
+      </span>
+    </div>
+    <div *ngIf="categoryVariation" class="variations-container">
+      <precia-category-card class="card-box" *ngFor="let variation of categoryVariation.data; let i = index"
+        [categoryVariation]="variation" (click)="openInformationModal(variation, variation.ranking_index)"
+        #variation></precia-category-card>
+    </div>
+  </div>
+</div>
+
+<div id="topDeltaInformationModalContainer">
+  <div class="modal fade" id="topDeltaInformationModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl" style="width: 1200px">
+      <div class="modal-content" *ngIf="selectedCategoryVariation">
+        <div class="modal-header">
+          <h5 class="modal-title">Detalle</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div>
+            <h5>Categoría</h5>
+            <p class="m-0">{{ this.selectedCategoryVariation.description}}</p>
+            <p>Esta categoria cuenta actualmente con {{selectedDetail.data.total_isines}} de ISINES valorados.
+            </p>
+          </div>
+
+          <div class="border-bottom border-dark border-1"></div>
+
+          <div class="mt-4">
+            <h5>Análisis TIR ISINES dentro de la categoría</h5>
+            <div class="row row-cols-3 mt-4">
+              <div class="col">
+                <p><strong>Referencia papel más corto</strong></p>
+                <p><strong>ISIN:</strong>{{selectedDetail.data.short_isin_ref.isin_code}}</p>
+                <p><strong>NEMO:</strong> {{selectedDetail.data.short_isin_ref.instrument}}</p>
+                <p><strong>PLAZO (días):</strong> {{selectedDetail.data.short_isin_ref.maturity_days}}</p>
+                <p><strong>EMISOR:</strong> {{selectedDetail.data.short_isin_ref.issuer}}</p>
+                <p><strong>TIR hoy:</strong> {{selectedDetail.data.short_isin_ref.today_yield + '%'}}</p>
+                <p><strong>TIR ayer:</strong> {{selectedDetail.data.short_isin_ref.yesterday_yield + '%'}}</p>
+                <p><strong>Variación:</strong> {{(selectedDetail.data.short_isin_ref.variation) + '%'}}</p>
+              </div>
+              <div class="col border-start border-dark border-1">
+                <p><strong>Referencia papel medio</strong></p>
+                <p><strong>ISIN:</strong>{{selectedDetail.data.medium_isin_ref.isin_code}}</p>
+                <p><strong>NEMO:</strong> {{selectedDetail.data.medium_isin_ref.instrument}}</p>
+                <p><strong>PLAZO (días):</strong> {{selectedDetail.data.medium_isin_ref.maturity_days}}</p>
+                <p><strong>EMISOR:</strong> {{selectedDetail.data.medium_isin_ref.issuer}}</p>
+                <p><strong>TIR hoy:</strong> {{selectedDetail.data.medium_isin_ref.today_yield + '%'}}</p>
+                <p><strong>TIR ayer:</strong> {{selectedDetail.data.medium_isin_ref.yesterday_yield + '%'}}</p>
+                <p><strong>Variación:</strong> {{(selectedDetail.data.medium_isin_ref.variation) + '%'}}</p>
+              </div>
+              <div class="col border-start border-dark border-1">
+                <p><strong>Referencia papel más largo</strong></p>
+                <p><strong>ISIN:</strong>{{selectedDetail.data.long_isin_ref.isin_code}}</p>
+                <p><strong>NEMO:</strong> {{selectedDetail.data.long_isin_ref.instrument}}</p>
+                <p><strong>PLAZO (días):</strong> {{selectedDetail.data.long_isin_ref.maturity_days}}</p>
+                <p><strong>EMISOR:</strong> {{selectedDetail.data.long_isin_ref.issuer}}</p>
+                <p><strong>TIR hoy:</strong> {{selectedDetail.data.long_isin_ref.today_yield + '%'}}</p>
+                <p><strong>TIR ayer:</strong> {{selectedDetail.data.long_isin_ref.yesterday_yield + '%'}}</p>
+                <p><strong>Variación:</strong> {{(selectedDetail.data.long_isin_ref.variation) + '%'}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-bottom border-dark border-1 mt-4"></div>
+
+          <div *ngIf="selectedDetail" class="mt-4">
+            <h5>Causa del movimiento</h5>
+            <div *ngIf="selectedDetail.data.folios.length == 0">
+              <h5>Movimiento de curva</h5>
+            </div>
+            <div style="
+                display: flex;
+                flex-direction: row;
+                min-height: 50px;
+                justify-content: space-between;
+                padding: 10px;
+              " *ngIf="selectedDetail.data.folios.length == 0">
+              <div style="display: flex; flex-direction: column">
+                <span>
+                  <h5>Curva Asociada</h5>
+                </span>
+                <span class="text-center">{{
+                  selectedDetail.data.cc_curve
+                  }}</span>
+              </div>
+              <div style="display: flex; flex-direction: column">
+                <span>
+                  <h5>Cambio promedio curva (pbs)</h5>
+                </span>
+                <span class="text-center">{{
+                  selectedDetail.data.pbs_change
+                  }}</span>
+              </div>
+              <div style="display: flex; flex-direction: column">
+                <span>
+                  <h5>Categoría</h5>
+                </span>
+                <span class="text-center">{{
+                  selectedDetail.data.category_id
+                  }}</span>
+              </div>
+              <div style="display: flex; flex-direction: column">
+                <span>
+                  <h5>Plazo Categoría</h5>
+                </span>
+                <span class="text-center">{{
+                  selectedDetail.data.maturity_range
+                  }}</span>
+              </div>
+            </div>
+
+            <div class="mt-3" *ngIf="selectedDetail.data.folios.length > 0">
+              <h5>Operaciones</h5>
+            </div>
+            <table class="table table-bordered mt-3" #comp5FoliosTable *ngIf="selectedDetail.data.folios.length > 0">
+              <thead class="table-secondary">
+                <tr>
+                  <th scope="col">Folio</th>
+                  <th scope="col">NEMO</th>
+                  <th scope="col">Plazo al Vencimiento</th>
+                  <th scope="col">Tasa (%)</th>
+                  <th scope="col">Monto ($)</th>
+                  <th scope="col">Hora de operacion</th>
+                  <th scope="col">Tipo</th>
+                  <th scope="col">Sistema</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let folio of currentlyVisibleFolios">
+                  <th class="text-right">{{ folio.sheet }}</th>
+                  <td>{{ folio.nemo }}</td>
+                  <td>{{ folio.maturity_date }}</td>
+                  <td class="text-right">{{ folio.yield }}</td>
+                  <td class="text-right">{{ folio.amount | number: '1.'}}</td>
+                  <td>{{ folio.timestamp_operation }}</td>
+                  <td>{{ folio.folio_type ?? 'N/A' | titlecase}}</td>
+                  <td>{{ folio.trading_system ?? 'N/A' }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex justify-content-between p-2" *ngIf="selectedDetail.data.folios.length > 0">
+              <ngb-pagination [collectionSize]="selectedDetail.data.folios.length" [(page)]="page" [pageSize]="pageSize"
+                (pageChange)="refreshFolios()">
+              </ngb-pagination>
+
+              <button type="button" class="btn btn-dark ms-1 mt-1" (click)="downloadFolios()">
+                Descargar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ngx-spinner type="ball-atom" [name]="spinnerCategory" [fullScreen]="true">
+  <p style="color: white">Obteniendo información de las categorías</p>
+</ngx-spinner>
+
+<ngx-spinner type="ball-atom" [name]="spinnerDetail" [fullScreen]="true">
+  <p style="color: white">Obteniendo detalle de la categoría</p>
+</ngx-spinner>

@@ -1,0 +1,20 @@
+<div
+  class="variation"
+  *ngIf="categoryVariation"
+  [ngbTooltip]="
+    this.categoryVariation.description
+  "
+>
+  <span class="span-padding text-small"
+    ><b>{{ categoryVariation.class_name.slice(0,7) + (categoryVariation.class_name.length>7?"...":"")  }}</b></span
+  >
+  <span class="span-padding text-small"
+    ><b>Categoría: </b>{{ categoryVariation.category_id }}</span
+  >
+  <span class="span-padding text-small"><b>Cambio pbs:</b> {{ categoryVariation.tir_variation }}</span>
+  <span class="span-padding text-small"
+    ><b>{{
+      categoryVariation.category_type == "C" ? "OPERACIONES" : "CURVA"
+    }}</b></span
+  >
+</div>

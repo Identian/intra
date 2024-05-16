@@ -1,0 +1,60 @@
+.divider-bar{
+    width: 96%; 
+    margin-left: 1%;
+}
+
+.start-text{
+    height: 50px; 
+    color: #8D8D8D;
+}
+
+.message-container{
+    display: flex; 
+    flex-direction: column; 
+    height: 100%;
+    justify-content: center; 
+    align-items: center;
+}
+
+.data-container{
+    display: flex; 
+    flex-direction: column; 
+    height: 100%;
+    justify-content: center;
+}
+
+.data-container> .row, .data-container> .row > .span {
+    overflow: hidden;
+    white-space: nowrap;
+} 
+
+.info-container{
+    border-radius: 8px;
+    background-color: #F7F7F7;
+    height: 150px;
+    margin-right: 5px;
+    overflow-y: scroll;
+    white-space: nowrap;
+}
+
+h3{
+    margin: 0;
+}
+
+th{
+    line-height: 18px;
+}
+
+label, span{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.hand {
+    cursor: pointer;
+}
+
+.pointer{
+    cursor:pointer;
+}
+  

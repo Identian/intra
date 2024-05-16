@@ -1,0 +1,31 @@
+<div style="height: 100%; margin-top: 5px; margin-left: 5px;">
+    <div style="position: absolute; height: 90%; width: 99%; overflow-y: auto;">
+
+        <div class="card mt-2">
+            <div class="card-header">
+                <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#folios-incluidos"
+                            type="button" role="tab" aria-controls="home" aria-selected="true">Folios
+                            Incluidos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="folios-tab" data-bs-toggle="tab" data-bs-target="#folios-excluidos"
+                            type="button" role="tab" aria-controls="profile" aria-selected="false">Folios
+                            Excluidos</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="folios-incluidos">
+                        <precia-folios-included></precia-folios-included>
+                    </div>
+                    <div class="tab-pane fade" id="folios-excluidos">
+                        <precia-folios-excluded></precia-folios-excluded>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

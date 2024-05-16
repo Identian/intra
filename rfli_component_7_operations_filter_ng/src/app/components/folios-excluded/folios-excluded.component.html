@@ -1,0 +1,43 @@
+<div class="mb-2">
+    <app-update-indicator [date]="fechaString" [version]="folioExclude.version"
+        [blinking]="isCalling"></app-update-indicator>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped border-secondary mt-2">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col" (click)="sortByFolio()" class="pointer">{{ 'folio' | uppercase}}</th>
+                <th scope="col">{{ 'nemo' | uppercase}}</th>
+                <th scope="col">{{ 'plazo vto' | uppercase}}</th>
+                <th scope="col">{{ 'monto' | uppercase}}</th>
+                <th scope="col">{{ 'tasa (%)' | uppercase}}</th>
+                <th scope="col">{{ 'categoria' | uppercase}}</th>
+                <th scope="col">{{ 'sistema neg' | uppercase}}</th>
+                <th scope="col">{{ 'razón de la exclusión' | uppercase}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let folio of folioExclude.data">
+                <td>{{folio.folio}}</td>
+                <td>{{folio.nemo}}</td>
+                <td>{{folio.maturity_days}}</td>
+                <td>{{folio.amount | number}}</td>
+                <td>{{folio.spread + '%'}}</td>
+                <td>{{folio.category_id}}</td>
+                <td>{{folio.trading_system}}</td>
+                <td>{{folio.reason}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="d-flex justify-content-between mt-2">
+    <ngb-pagination [collectionSize]="folioExclude.total_size" [(page)]="page" [pageSize]="50"
+        (pageChange)="refreshFolios()">
+    </ngb-pagination>
+</div>
+
+<ngx-spinner type="ball-atom" [fullScreen]="true">
+    <p style="color: white">Obteniendo folios excluidos</p>
+</ngx-spinner>
